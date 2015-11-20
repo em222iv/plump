@@ -11,6 +11,7 @@ public class unitTests {
 	@Test
 	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() {
 		Card card = new Card(Suit.HEARTS,Value.ACE);
+		
 	}
 	
 	@Test
