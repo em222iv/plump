@@ -14,6 +14,12 @@ public class unitTests {
 	}
 	
 	@Test
+	public void shouldPrintCardWithToStringMethod() {
+		Card card = new Card(Suit.HEARTS,Value.ACE);
+		assertEquals(card.toString(),"ACE of HEARTS");
+	}
+	
+	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
 	{
 	    s  = Suit.values();
