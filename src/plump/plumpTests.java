@@ -5,7 +5,8 @@ import org.mockito.Mockito;
 import org.junit.Test;
 
 public class plumpTests {
-	private Suit[] s = null;
+	private Suits[] s = null;
+	private Values[] v = null;
 	@Test
 	public void shouldSetCardVariableViaConstructorAndGetZero() {
 		Card card = new Card(0);
@@ -38,5 +39,12 @@ public class plumpTests {
 	{
 	    s  = Suit.values();
 	    assertEquals(s[3], Suit.CLUBS);
+	}
+	
+	@Test
+	public void shouldExistValueEnumWithValueAce()
+	{
+	    v  = Value.values();
+	    assertEquals(v[0], Value.ACE);
 	}
 }
