@@ -7,11 +7,6 @@ import org.junit.Test;
 public class unitTests {
 	private Suit[] s = null;
 	private Value[] v = null;
-	@Test
-	public void shouldSetCardVariableViaConstructorAndGetZero() {
-		Card card = new Card(0);
-		assertEquals(card.getA(),0);
-	}
 	
 	@Test
 	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() {
