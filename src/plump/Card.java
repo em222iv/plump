@@ -5,5 +5,7 @@ public class Card {
 	public Card(int _a) {
        this.a = _a;
     }
-	
+	public int getA (){
+		return this.a;
+	}
 }
