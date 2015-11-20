@@ -9,9 +9,9 @@ public class unitTests {
 	private Value[] v = null;
 	
 	@Test
-	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() {
+	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() 
+	{
 		Card card = new Card(Suit.HEARTS,Value.ACE);
-		
 	}
 	
 	@Test
@@ -66,5 +66,11 @@ public class unitTests {
 	{
 		 v  = Value.values();
 	     assertEquals(1, Value.ACE.Value);
+	}
+	
+	@Test
+	public void shouldCallDeckConstructor() 
+	{
+		Deck deck = new Deck();
 	}
 }
