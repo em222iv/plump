@@ -13,31 +13,32 @@ public class plumpTests {
 		assertEquals(card.a,0);
 	}
 	
+	
 	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
 	{
-	    Suit[] s  = Suit.values();
+	    s  = Suit.values();
 	    assertEquals(s[0], Suit.HEARTS);
 	}
 	
 	@Test
 	public void shouldExistSuitEnumWithSuitSpadesValue()
 	{
-	    Suit[] s  = Suit.values();
+	    s  = Suit.values();
 	    assertEquals(s[1], Suit.SPADES);
 	}
 	
 	@Test
 	public void shouldExistSuitEnumWithSuitDiamondValue()
 	{
-	    Suit[] s  = Suit.values();
+	    s  = Suit.values();
 	    assertEquals(s[2], Suit.DIAMONDS);
 	}
 	
 	@Test
 	public void shouldExistSuitEnumWithSuitClubsValue()
 	{
-	    Suit[] s  = Suit.values();
+	    s  = Suit.values();
 	    assertEquals(s[3], Suit.CLUBS);
 	}
 }
