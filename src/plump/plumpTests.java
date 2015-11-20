@@ -6,13 +6,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class plumpTests {
-
+	private Suit[] s = null;
 	@Test
 	public void shouldSetCardVariableViaConstructorAndGetZero() {
 		Card card = new Card(0);
 		assertEquals(card.a,0);
 	}
-	
 	
 	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
