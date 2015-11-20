@@ -14,9 +14,16 @@ public class plumpTests {
 	}
 	
 	@Test
-	public void shouldExistSuitEnum()
+	public void shouldExistSuitEnumWithSuitHeartValue()
 	{
 	    Suit[] s  = Suit.values();
 	    assertEquals(s[0], Suit.HEARTS);
+	}
+	
+	@Test
+	public void shouldExistSuitEnumWithSuitSpadesValue()
+	{
+	    Suit[] s  = Suit.values();
+	    assertEquals(s[1], Suit.SPADES);
 	}
 }
