@@ -56,9 +56,9 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldExistConstrunctorInValueEnum()
+	public void shouldExistNummeredValueForEachValue()
 	{
-		 v  = Value.values(1);
-	     assertEquals(v[0], Value.ACE);
+		 v  = Value.values();
+	     assertEquals(1, Value.ACE.Value);
 	}
 }
