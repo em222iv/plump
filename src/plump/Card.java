@@ -10,7 +10,7 @@ public class Card {
         this.suit = _suit;
     }
 
-	public int getA (){
-		return this.a;
+	public String toString (){
+		return value.name()+" of "+suit.name();
 	}
 }
