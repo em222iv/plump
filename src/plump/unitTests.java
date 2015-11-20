@@ -8,11 +8,11 @@ public class unitTests {
 	private Suit[] s = null;
 	private Value[] v = null;
 	
-	@Test
-	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() {
-		Card card = new Card(Suit.HEARTS,Value.ACE);
-		
-	}
+//	@Test
+//	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() {
+//		Card card = new Card(Suit.HEARTS,Value.ACE);
+//		
+//	}
 	
 	@Test
 	public void shouldPrintCardWithToStringMethod() {
