@@ -33,4 +33,11 @@ public class plumpTests {
 	    Suit[] s  = Suit.values();
 	    assertEquals(s[2], Suit.DIAMOND);
 	}
+	
+	@Test
+	public void shouldExistSuitEnumWithSuitClubsValue()
+	{
+	    Suit[] s  = Suit.values();
+	    assertEquals(s[3], Suit.CLUBS);
+	}
 }
