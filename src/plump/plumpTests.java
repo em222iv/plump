@@ -8,6 +8,7 @@ public class plumpTests {
 	private Suit[] s = null;
 	private Value[] v = null;
 	@Test
+	
 	public void shouldSetCardVariableViaConstructorAndGetZero() {
 		Card card = new Card(0);
 		assertEquals(card.getA(),0);
@@ -46,5 +47,11 @@ public class plumpTests {
 	{
 		 v  = Value.values();
 	     assertEquals(v[0], Value.ACE);
+	}
+	
+	@Test
+	public void shouldExist13DifferentValuesinValueEnum()
+	{
+	     assertEquals(13, Value.values().length);
 	}
 }
