@@ -73,4 +73,12 @@ public class unitTests {
 	{
 		Deck deck = new Deck();
 	}
+	
+
+	@Test
+	public void shouldCallDeckConstructorWith0AndSetPublicVariable() 
+	{
+		Deck deck = new Deck(0);
+		assertEquals(deck.asd,0);
+	}
 }
