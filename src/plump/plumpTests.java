@@ -1,7 +1,7 @@
 package plump;
 import java.util.*;
-
 import static org.junit.Assert.*;
+import org.mockito.*;
 
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class plumpTests {
 	@Test
 	public void shouldSetCardVariableViaConstructorAndGetZero() {
 		Card card = new Card(0);
-		assertEquals(card.a,0);
+		assertEquals(card.getA(),0);
 	}
 	
 	@Test
