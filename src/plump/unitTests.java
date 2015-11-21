@@ -111,10 +111,11 @@ public class unitTests {
 	}
 	
 
-	@Test(expected=NullPointerException.class)
-	public void shouldExistSizeMethodOnPlayerWitchThrowsException() throws Exception
+	@Test
+	public void shouldExistSizeMethodOnPlayerWitchThrowsException()
 	{
-		this.player.size();
+		this.player.setHand(this.card);
+		assertEquals(1,this.player.size());
 	}
 	
 	@Test
