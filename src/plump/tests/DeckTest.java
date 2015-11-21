@@ -51,4 +51,11 @@ public class DeckTest {
 	{
 		this.deck.handOutCardToPlayer(0,new Player("Siri"));
 	}
+	
+	@Test
+	public void testExistRemoveCardMethodOnDeck()
+	{
+		this.deck.remove()
+	}
+	
 }
