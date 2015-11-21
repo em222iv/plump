@@ -25,4 +25,9 @@ public class Player {
 		hand.add(object);
 	}
 
+	public void size() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
