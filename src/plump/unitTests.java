@@ -105,7 +105,7 @@ public class unitTests {
 	public void shouldThrownExcpetionWhenCalled()  throws Exception
 	{
 		Player player1 = new Player("Player1");
-		player1.getName();
+		assertEquals("Player1",player1.getName());
 	}
 	
 	
