@@ -29,8 +29,8 @@ public class Player {
 		return hand.size();
 	}
 
-	public void pickCard() {
-		// TODO Auto-generated method stub
+	public void pickCard(Object obj) {
+		throw new NullPointerException();
 		
 	}
 
