@@ -78,13 +78,6 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldRemoveAndReturnTheCardOnTopOfDeck()
-	{
-		Card first = this.deck.get(0);
-		assertEquals(first,this.deck.handOutCard());
-	}
-	
-	@Test
 	public void shouldReturnCardByIndex()
 	{
 		this.deck.get(1);
