@@ -111,7 +111,7 @@ public class unitTests {
 	}
 	
 
-	@Test(expected=IllegalArgumentException.class)
+	@Test(expected=NullPointerException.class)
 	public void shouldExistSizeMethodOnPlayer() throws Exception
 	{
 		this.player.size();

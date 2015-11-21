@@ -26,7 +26,7 @@ public class Player {
 	}
 
 	public void size() {
-		// TODO Auto-generated method stub
+		throw new NullPointerException();
 		
 	}
 
