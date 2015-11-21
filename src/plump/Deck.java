@@ -19,8 +19,11 @@ public class Deck {
 		return deck.size();
     }
 
-	public Card handOutCard(int numberOfCards,Player player) {
-		return deck.remove(0);
+	public void handOutCard(int numberOfCards,Player player) {
+		for(int i = 0; i <= numberOfCards;i++){
+			Card curr = deck.remove(0);
+			player.setHand(curr);
+		}
 	}
 
 	public Card get(int index) {
