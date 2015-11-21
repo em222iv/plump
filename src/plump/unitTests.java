@@ -148,8 +148,8 @@ public class unitTests {
 	@Test
 	public void test() 
 	{	
-		card = mock(Card.class);
-		this.player.pickCard(card);
+		
+		this.player.pickCard(this.card);
 		
 	}
 	
