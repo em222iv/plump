@@ -29,9 +29,9 @@ public class Player {
 		return hand.size();
 	}
 
-	public void pickCard(Object obj) {
-		if(obj != Card.class)
-			throw new IllegalArgumentException();
+	public void pickCard(Card obj) {
+
+		hand.remove(obj);
 	}
 
 }

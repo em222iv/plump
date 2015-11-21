@@ -139,17 +139,12 @@ public class unitTests {
 		  verify(player, times(1)).setHand(first);
 	}
 	
-	@Test(expected=IllegalArgumentException.class)
-	public void shouldReturnNullWhenInputIsNull() throws Exception
-	{
-		this.player.pickCard(1);  
-	}
 	
 	@Test
 	public void test() 
 	{	
 		
-		this.player.pickCard(this.card);
+		this.player.pickCard(new Card(Suit.HEARTS,Value.ACE));
 		
 	}
 	
