@@ -1,5 +1,8 @@
 package plump;
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.mockito.Mockito;
 
@@ -99,11 +102,13 @@ public class unitTests {
 		assertEquals("Siri",this.player.getName());
 	}
 	
-	@Test(expected=NullPointerException.class)
-	public void shouldThrowException() throws Exception
+	@Test
+	public void shouldThrowException()
 	{	
+		ArrayList<Card> arr = new ArrayList<Card>();
+		arr.add(this.card);
 		this.player.setHand(this.card);
-		assertEquals(this.card, this.player.getHand());
+		assertEquals(arr, this.player.getHand());
 	}
 	
 	@Test

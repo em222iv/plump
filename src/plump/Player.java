@@ -17,8 +17,8 @@ public class Player {
 		return this.name;
 	}
 
-	public void getHand() {
-		throw new NullPointerException();
+	public ArrayList<Card> getHand() {
+		return hand;
 	}
 
 	public void setHand(Card object) {
