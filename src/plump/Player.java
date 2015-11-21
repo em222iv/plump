@@ -30,8 +30,8 @@ public class Player {
 	}
 
 	public void pickCard(Object obj) {
-		if(obj == null)
-			throw new NullPointerException();
+		if(obj != Card.class)
+			throw new IllegalArgumentException();
 	}
 
 }
