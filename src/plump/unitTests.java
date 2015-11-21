@@ -85,7 +85,7 @@ public class unitTests {
 	public void shouldThrowshouldTrowUnsupportedOperationExceptionWhenCalled() throws Exception
 	{
 		Deck deck = new Deck();
-		deck.get();
+		deck.get(1);
 	}
 	
 }
