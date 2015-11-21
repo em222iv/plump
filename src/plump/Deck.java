@@ -39,7 +39,7 @@ public class Deck {
 		deck.add(card);
 	}
 	
-	public void remove() {
+	public void remove(Card card) {
 		
 	}
 
