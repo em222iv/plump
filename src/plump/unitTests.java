@@ -81,4 +81,11 @@ public class unitTests {
 		deck.handOutCard();
 	}
 	
+	@Test(expected=UnsupportedOperationException.class)
+	public void test() throws Exception
+	{
+		Deck deck = new Deck();
+		deck.get();
+	}
+	
 }
