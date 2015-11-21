@@ -140,10 +140,9 @@ public class unitTests {
 	}
 	
 	@Test(expected=NullPointerException.class)
-	public void shouldHavepickCardMethod() throws Exception
+	public void shouldReturnNullWhenInputIsNull() throws Exception
 	{
 		this.player.pickCard(null);
-		  
 		  
 	}
 	
