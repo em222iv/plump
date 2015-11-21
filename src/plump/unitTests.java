@@ -29,6 +29,7 @@ public class unitTests {
 	@Test
 	public void shouldGetDeckSizeOf52()
 	{
+		this.deck.resetDeck();
 		assertEquals(52,this.deck.size());
 	}
 	
@@ -86,6 +87,12 @@ public class unitTests {
 		this.deck.get(1);
 	}
 	
+	@Test
+	public void test()
+	{
+		this.deck.get(1);
+	}
+	
 	@Test(expected=IllegalArgumentException.class)
 	public void shouldThrowExceptionOnNullInput() throws Exception
 	{
@@ -137,15 +144,6 @@ public class unitTests {
 		  d.handOutCard(1,player);
 
 		  verify(player, times(1)).setHand(first);
-	}
-	
-	
-	@Test
-	public void test() 
-	{	
-		
-		this.player.pickCard(new Card(Suit.HEARTS,Value.ACE));
-		
 	}
 	
 }

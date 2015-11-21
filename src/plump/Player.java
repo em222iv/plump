@@ -30,7 +30,6 @@ public class Player {
 	}
 
 	public void pickCard(Card obj) {
-
 		hand.remove(obj);
 	}
 
