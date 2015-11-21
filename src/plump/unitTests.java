@@ -89,4 +89,11 @@ public class unitTests {
 		deck.get(1);
 	}
 	
+	@Test
+	public void test()
+	{
+		new Player(null);
+	}
+	
+	
 }

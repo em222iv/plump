@@ -21,12 +21,10 @@ public class Deck {
 
 	public Card handOutCard() {
 		return deck.remove(0);
-		
 	}
 
 	public Card get(int index) {
 		return deck.get(index);
-		
 	}
 
 }
