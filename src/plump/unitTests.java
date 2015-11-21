@@ -110,6 +110,13 @@ public class unitTests {
 		this.player.setHand(this.card);
 	}
 	
+
+	@Test
+	public void test()
+	{
+		this.player.size();
+	}
+	
 	@Test
 	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer()
 	{
