@@ -75,7 +75,7 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldTrowUnsupportedOperationException()
+	public void shouldRemoveAndReturnTheCardOnTopOfDeck()
 	{
 		Deck deck = new Deck();
 		Card first = deck.get(0);
