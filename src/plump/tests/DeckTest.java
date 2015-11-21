@@ -1,5 +1,5 @@
 package plump.tests;
-
+import static org.mockito.Mockito.*;
 import static org.junit.Assert.*;
 
 import org.junit.Before;

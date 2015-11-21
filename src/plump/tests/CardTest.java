@@ -1,5 +1,5 @@
 package plump.tests;
-
+import static org.mockito.Mockito.*;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -10,8 +10,6 @@ import plump.Suit;
 import plump.Value;
 
 public class CardTest {
-	private Suit[] s = null;
-	private Value[] v = null;
 	private Card card = null;
 
 	
@@ -19,11 +17,10 @@ public class CardTest {
 	public void shouldInstantiateTheDifferentClasses() 
 	{
 		this.card = new Card(Suit.HEARTS,Value.ACE);
-
 	}
 	
 	@Test
-	public void shouldPrintCardWithToStringMethod() {
+	public void shouldReturnCardWithToStringMethod() {
 		assertEquals(this.card.toString(),"ACE of HEARTS");
 	}
 

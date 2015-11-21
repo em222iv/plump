@@ -1,10 +1,7 @@
 package plump.tests;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-
+import static org.mockito.Mockito.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -75,7 +72,6 @@ public class PlayerTest {
 		  verify(player, times(1)).giveCard(first);
 	}
 	
-	
 	@Spy 
 	Player p = new Player("test");
 	@Test
@@ -86,6 +82,19 @@ public class PlayerTest {
 		  d.handOutCardToPlayer(6,player);
 		  assertEquals(7,player.amountOfCardsOnHand());
 		  
+	}
+	
+	@Test
+	public void test()
+	{	
+		  Player player = new Player("test");
+		  Deck d = new Deck();
+		  Card c = new Card(Suit.CLUBS,Value.ACE);
+		  player.giveCard(c);
+		  player.pickCard(c);
+		  
+
+		
 	}
 		
 }
