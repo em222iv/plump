@@ -23,8 +23,7 @@ public class unitTests {
 	
 	@Test
 	public void shouldPrintCardWithToStringMethod() {
-		Card card = new Card(Suit.HEARTS,Value.ACE);
-		assertEquals(card.toString(),"ACE of HEARTS");
+		assertEquals(this.card.toString(),"ACE of HEARTS");
 	}
 	
 	@Test
@@ -78,16 +77,14 @@ public class unitTests {
 	@Test
 	public void shouldRemoveAndReturnTheCardOnTopOfDeck()
 	{
-		Deck deck = new Deck();
-		Card first = deck.get(0);
-		assertEquals(first,deck.handOutCard());
+		Card first = this.deck.get(0);
+		assertEquals(first,this.deck.handOutCard());
 	}
 	
 	@Test
 	public void shouldReturnCardByIndex()
 	{
-		Deck deck = new Deck();
-		deck.get(1);
+		this.deck.get(1);
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
