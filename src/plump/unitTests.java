@@ -139,5 +139,12 @@ public class unitTests {
 		  verify(player, times(1)).setHand(first);
 	}
 	
+	@Test
+	public void test()
+	{
+		this.player.pickCard();
+		  
+		  
+	}
 	
 }

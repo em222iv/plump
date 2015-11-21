@@ -27,7 +27,6 @@ public class Player {
 
 	public int amountOfCardsOnHand() {
 		return hand.size();
-		
 	}
 
 }
