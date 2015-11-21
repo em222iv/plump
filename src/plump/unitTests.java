@@ -90,7 +90,7 @@ public class unitTests {
 	}
 	
 	@Test
-	public void test()
+	public void shouldExistPLayerConstructor()
 	{
 		new Player(null);
 	}
