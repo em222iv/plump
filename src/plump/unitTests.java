@@ -99,9 +99,9 @@ public class unitTests {
 		assertEquals("Siri",this.player.getName());
 	}
 	
-	@Test
-	public void test()  
+	@Test(expected=NullPointerException.class)
+	public void shouldThrowException() throws Exception
 	{
-		this.player.getHand();
+		this.player.getHand();;
 	}
 }
