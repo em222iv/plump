@@ -29,4 +29,9 @@ public class Player {
 		return hand.size();
 	}
 
+	public void pickCard() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
