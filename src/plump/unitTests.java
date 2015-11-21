@@ -27,7 +27,7 @@ public class unitTests {
 		assertEquals(this.card.toString(),"ACE of HEARTS");
 	}
 	@Test
-	public void shouldGetDeckSizeOf52()
+	public void shouldResetDeckAndGetDeckSizeOf52()
 	{
 		this.deck.resetDeck();
 		assertEquals(52,this.deck.size());
