@@ -13,4 +13,9 @@ public class Player {
 		return this.name;
 	}
 
+	public void getHand() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
