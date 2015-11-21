@@ -112,7 +112,7 @@ public class unitTests {
 	
 
 	@Test(expected=NullPointerException.class)
-	public void shouldExistSizeMethodOnPlayer() throws Exception
+	public void shouldExistSizeMethodOnPlayerWitchThrowsException() throws Exception
 	{
 		this.player.size();
 	}
