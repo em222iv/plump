@@ -117,7 +117,7 @@ public class unitTests {
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer() throws Exception
+	public void shouldThrowExceptionOnZeroInput() throws Exception
 	{
 		this.deck.handOutCard(0,this.player);
 	}
