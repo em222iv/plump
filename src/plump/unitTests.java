@@ -1,17 +1,24 @@
 package plump;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.mockito.Mockito;
 
 import org.junit.Test;
 
 public class unitTests {
+	private String name = "Siri";
 	private Suit[] s = null;
 	private Value[] v = null;
+	private Card card = null;
+	private Deck deck = null;
+	private Player player = null;
 	
-	@Test
+	@Before
 	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() 
 	{
-		Card card = new Card(Suit.HEARTS,Value.ACE);
+		this.card = new Card(Suit.HEARTS,Value.ACE);
+		this.deck = new Deck();
+		this.player = new Player(this.name);
 	}
 	
 	@Test
@@ -69,12 +76,6 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldCallDeckConstructor() 
-	{
-		Deck deck = new Deck();
-	}
-	
-	@Test
 	public void shouldRemoveAndReturnTheCardOnTopOfDeck()
 	{
 		Deck deck = new Deck();
@@ -96,17 +97,11 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldNotThrowExceptionOnCorrectInput()
+	public void shouldThrownExcpetionWhenCalled()  
 	{
-		Player player1 = new Player("Player1");
+		assertEquals("Siri",this.player.getName());
 	}
 	
-	@Test
-	public void shouldReturnThePlayersName()
-	{
-		Player player1 = new Player("Player1");
-		assertEquals("Player1",player1.getName());
-	}
-	
+
 	
 }
