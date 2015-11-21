@@ -48,7 +48,11 @@ public class PlayerTest {
 	@Test
 	public void shouldExistGethandMethod()
 	{
-		this.player.getHand();
+		Card c = new Card(Suit.CLUBS,Value.ACE); 
+		Deck d = new Deck();
+		d.add(c);
+		this.player.giveCard(c);
+		 assertEquals(c,this.player.getHand());
 	}
 
 	@Test
