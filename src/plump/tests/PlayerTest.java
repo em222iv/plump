@@ -48,7 +48,7 @@ public class PlayerTest {
 	@Test
 	public void shouldExistGethandMethod()
 	{
-		this.player.getHand());
+		this.player.getHand();
 	}
 
 	@Test

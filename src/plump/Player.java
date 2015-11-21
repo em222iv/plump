@@ -23,6 +23,11 @@ public class Player {
 		return hand.size();
 	}
 
+	public void getHand() {
+		// TODO Auto-generated method stub
+		
+	}
+
 //	public void pickCard(Card obj) {
 //		hand.remove(obj);
 //	}
