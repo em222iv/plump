@@ -81,7 +81,7 @@ public class unitTests {
 		deck.size();
 	}
 	
-	@Test
+	@Test(expected=NullPointerException.class)
 	public void test()
 	{
 		Deck deck = new Deck();

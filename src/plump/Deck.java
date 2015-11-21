@@ -2,13 +2,13 @@ package plump;
 import java.util.*;
 
 public class Deck {
-	
+	private ArrayList<Card> deck;
 	public Deck(){
 		
 	}
 
-    public void size(){
-		throw new UnsupportedOperationException();
+    public int size(){
+		return deck.size();
     }
 
 }
