@@ -105,9 +105,10 @@ public class unitTests {
 		this.player.getHand();
 	}
 	
-	@Test
-	public void test()  
+	@Test(expected=NullPointerException.class)
+	public void test() throws Exception
 	{
-		this.player.setHand();
+		this.player.setHand(null);
 	}
+	
 }
