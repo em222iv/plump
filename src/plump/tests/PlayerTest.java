@@ -65,6 +65,7 @@ public class PlayerTest {
 		  verify(player, times(1)).giveCard(first);
 	}
 	
+	
 	@Spy 
 	Player p = new Player("test");
 	@Test
