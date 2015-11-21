@@ -92,8 +92,7 @@ public class PlayerTest {
 		  Card c = new Card(Suit.CLUBS,Value.ACE);
 		  player.giveCard(c);
 		  player.pickCard(c);
-		  
-
+		  assertEquals(0,player.amountOfCardsOnHand());
 		
 	}
 		
