@@ -35,4 +35,9 @@ public class Deck {
 		}
 	}
 
+	public void add(Card card) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
