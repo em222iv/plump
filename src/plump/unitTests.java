@@ -116,14 +116,14 @@ public class unitTests {
 		assertEquals(1,this.player.amountOfCardsOnHand());
 	}
 	
-	@Test
-	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer()
+	@Test(expected=IllegalArgumentException.class)
+	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer() throws Exception
 	{
-		this.deck.handOutCard(1,this.player);
+		this.deck.handOutCard(0,this.player);
 	}
 	
 	@Test
-	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer1()
+	public void shouldMockToSeeIfDeckIsDealingToPLayer()
 	{
 		  player = mock(Player.class);
 		 
