@@ -25,7 +25,7 @@ public class Player {
 		hand.add(object);
 	}
 
-	public int size() {
+	public int amountOfCardsOnHand() {
 		return hand.size();
 		
 	}

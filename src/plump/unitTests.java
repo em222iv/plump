@@ -112,10 +112,10 @@ public class unitTests {
 	
 
 	@Test
-	public void shouldExistSizeMethodOnPlayerWitchThrowsException()
+	public void shouldReturnTheAmountOfCardsOnPlayerHand()
 	{
 		this.player.setHand(this.card);
-		assertEquals(1,this.player.size());
+		assertEquals(1,this.player.amountOfCardsOnHand());
 	}
 	
 	@Test
