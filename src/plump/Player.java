@@ -7,4 +7,9 @@ public class Player {
 			throw new IllegalArgumentException();
 	}
 
+	public void getName() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
