@@ -89,8 +89,8 @@ public class unitTests {
 		deck.get(1);
 	}
 	
-	@Test
-	public void shouldExistPLayerConstructor()
+	@Test(expected=IllegalArgumentException.class)
+	public void shouldExistPLayerConstructor() throws Exception
 	{
 		new Player(null);
 	}
