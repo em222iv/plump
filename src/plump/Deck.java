@@ -5,7 +5,14 @@ public class Deck {
 	private ArrayList<Card> deck;
 	public Deck(){
 		deck = new ArrayList<Card>();
-		deck.add(new Card(Suit.HEARTS,Value.ACE));
+		Suit[] suits = Suit.values();
+		Value[] values = Value.values();
+		
+		for(Suit suit : suits){
+			for(Value value : values){
+				deck.add(new Card(suit,value));
+			}
+		}
 	}
 	
     public int size(){

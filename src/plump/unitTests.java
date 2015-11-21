@@ -74,12 +74,6 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	@Test
-	public void shouldCreateADeckWithOneCard() 
-	{
-		Deck deck = new Deck();
-		assertEquals(deck.size(),1);	
-	}
 	
 	@Test
 	public void test() 
