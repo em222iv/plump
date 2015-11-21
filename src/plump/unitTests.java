@@ -82,7 +82,7 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldThrowshouldTrowUnsupportedOperationExceptionWhenCalled()
+	public void shouldReturnCardByIndex()
 	{
 		Deck deck = new Deck();
 		deck.get(1);
