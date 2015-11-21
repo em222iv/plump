@@ -40,7 +40,7 @@ public class Deck {
 	}
 	
 	public void remove(Card card) {
-		
+		deck.remove(card);
 	}
 
 }
