@@ -10,7 +10,7 @@ public class Deck {
 		return deck.size();
     }
 
-	public void handOutCard(int numberOfCards,Player player) {
+	public void handOutCardToPlayer(int numberOfCards,Player player) {
 		if(numberOfCards == 0)
 			throw new IllegalArgumentException();
 		for(int i = 0; i <= numberOfCards;i++){

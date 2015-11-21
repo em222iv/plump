@@ -34,6 +34,12 @@ public class unitTests {
 	}
 	
 	@Test
+	public void test()
+	{
+		this.deck.add(this.card);
+	}
+	
+	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
 	{
 	    s  = Suit.values();
@@ -84,12 +90,7 @@ public class unitTests {
 	@Test
 	public void shouldReturnCardByIndex()
 	{
-		this.deck.get(1);
-	}
-	
-	@Test
-	public void test()
-	{
+		this.deck.resetDeck();
 		this.deck.get(1);
 	}
 	
@@ -103,15 +104,6 @@ public class unitTests {
 	public void shouldThrownExcpetionWhenCalled()  
 	{
 		assertEquals("Siri",this.player.getName());
-	}
-	
-	@Test
-	public void shouldThrowException()
-	{	
-		ArrayList<Card> arr = new ArrayList<Card>();
-		arr.add(this.card);
-		this.player.setHand(this.card);
-		assertEquals(arr, this.player.getHand());
 	}
 	
 	@Test
@@ -131,7 +123,7 @@ public class unitTests {
 	@Test(expected=IllegalArgumentException.class)
 	public void shouldThrowExceptionOnZeroInput() throws Exception
 	{
-		this.deck.handOutCard(0,this.player);
+		this.deck.handOutCardToPlayer(0,this.player);
 	}
 	
 	@Test
@@ -140,8 +132,9 @@ public class unitTests {
 		  player = mock(Player.class);
 		 
 		  Deck d = new Deck();
+		  d.resetDeck();
 		  Card first = d.get(0);
-		  d.handOutCard(1,player);
+		  d.handOutCardToPlayer(1,player);
 
 		  verify(player, times(1)).setHand(first);
 	}
