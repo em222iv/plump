@@ -19,7 +19,7 @@ public class Deck {
 		return deck.size();
     }
 
-	public Card handOutCard() {
+	public Card handOutCard(int numberOfCards,Player player) {
 		return deck.remove(0);
 	}
 
