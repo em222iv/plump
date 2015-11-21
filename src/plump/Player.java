@@ -21,8 +21,8 @@ public class Player {
 		throw new NullPointerException();
 	}
 
-	public void setHand() {
-		// TODO Auto-generated method stub
+	public void setHand(Object object) {
+		throw new NullPointerException();
 		
 	}
 
