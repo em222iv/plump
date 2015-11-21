@@ -23,7 +23,6 @@ public class Player {
 
 	public void setHand(Card object) {
 		hand.add(object);
-		
 	}
 
 }

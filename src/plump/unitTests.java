@@ -112,9 +112,15 @@ public class unitTests {
 	}
 	
 	@Test
-	public void ShouldAddCardToPlayerHand() throws Exception
+	public void ShouldAddCardToPlayerHand()
 	{
 		this.player.setHand(this.card);
+	}
+	
+	@Test
+	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer()
+	{
+		this.deck.handOutCard(1,this.player);
 	}
 	
 }
