@@ -74,12 +74,6 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	@Test(expected=UnsupportedOperationException.class)
-	public void shouldTthrowExcBecauseNotImplemented() throws Exception 
-	{
-		Deck deck = new Deck();
-		deck.size();
-	}
 	
 	@Test(expected=NullPointerException.class)
 	public void test()
