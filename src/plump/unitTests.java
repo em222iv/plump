@@ -106,7 +106,7 @@ public class unitTests {
 	}
 	
 	@Test
-	public void test() throws Exception
+	public void ShouldAddCardToPlayerHand() throws Exception
 	{
 		this.player.setHand(this.card);
 	}
