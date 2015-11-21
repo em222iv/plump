@@ -74,11 +74,11 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	@Test
-	public void shouldGetACompleteDeckOf52Cards() 
+	@Test(expected=UnsupportedOperationException.class)
+	public void test() throws Exception
 	{
 		Deck deck = new Deck();
-		assertEquals(deck.size(),52);	
+		deck.handOutCard();
 	}
 	
 }
