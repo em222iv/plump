@@ -75,7 +75,7 @@ public class unitTests {
 	}
 	
 	@Test(expected=UnsupportedOperationException.class)
-	public void test() throws Exception
+	public void shouldTrowUnsupportedOperationException() throws Exception
 	{
 		Deck deck = new Deck();
 		deck.handOutCard();
