@@ -17,4 +17,9 @@ public class Player {
 		throw new NullPointerException();
 	}
 
+	public void setHand() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
