@@ -74,21 +74,11 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	@Test(expected=NullPointerException.class)
-	public void shouldGetNullPointerSinceArrayListHasNotBeenInstantiated()
-	{
-		Deck deck = new Deck();
-		assertNull(deck.size());
-	}
-	
 	@Test
-	public void test() 
+	public void shouldCreateADeckWithOneCard() 
 	{
 		Deck deck = new Deck();
-		assertEquals(deck.size(),1);
-		
+		assertEquals(deck.size(),1);	
 	}
-	
-
 	
 }
