@@ -102,7 +102,14 @@ public class unitTests {
 	}
 	
 	@Test
-	public void test()
+	public void shouldExistGetNameMethodOnPLayer()
+	{
+		Player player1 = new Player("Player1");
+		player1.getName();
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void test()  throws Exception
 	{
 		Player player1 = new Player("Player1");
 		player1.getName();
