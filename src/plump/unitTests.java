@@ -90,7 +90,7 @@ public class unitTests {
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void shouldThrowException() throws Exception
+	public void shouldThrowExceptionOnNullInput() throws Exception
 	{
 		new Player(null);
 	}
