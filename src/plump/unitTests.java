@@ -139,10 +139,10 @@ public class unitTests {
 		  verify(player, times(1)).setHand(first);
 	}
 	
-	@Test(expected=NullPointerException.class)
+	@Test(expected=IllegalAccessException.class)
 	public void shouldReturnNullWhenInputIsNull() throws Exception
 	{
-		this.player.pickCard(null);  
+		this.player.pickCard(1);  
 	}
 	
 	@Test
