@@ -32,4 +32,16 @@ public class Deck {
 		return deck.get(index);
 	}
 
+	public void resetDeck() {
+		deck = new ArrayList<Card>();
+		Suit[] suits = Suit.values();
+		Value[] values = Value.values();
+		
+		for(Suit suit : suits){
+			for(Value value : values){
+				deck.add(new Card(suit,value));
+			}
+		}
+	}
+
 }
