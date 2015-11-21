@@ -25,8 +25,8 @@ public class Player {
 		hand.add(object);
 	}
 
-	public void size() {
-		throw new NullPointerException();
+	public int size() {
+		return hand.size();
 		
 	}
 
