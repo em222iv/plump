@@ -82,10 +82,10 @@ public class unitTests {
 	}
 	
 	@Test(expected=UnsupportedOperationException.class)
-	public void test() 
+	public void test() throws Exception 
 	{
 		Deck deck = new Deck();
-		
+		deck.size();
 	}
 	
 	

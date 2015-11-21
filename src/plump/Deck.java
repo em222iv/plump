@@ -11,5 +11,9 @@ public class Deck {
     public Deck (int _a) {
         this.asd = _a;
     }
+    
+    public void size(){
+		throw new UnsupportedOperationException();
+    }
 
 }
