@@ -1,10 +1,8 @@
 package plump;
 import static org.junit.Assert.*;
-
 import java.util.ArrayList;
-
 import org.junit.Before;
-import org.mockito.Mockito;
+import static org.mockito.Mockito.*;
 
 import org.junit.Test;
 
@@ -122,6 +120,18 @@ public class unitTests {
 	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer()
 	{
 		this.deck.handOutCard(1,this.player);
+	}
+	
+	@Test
+	public void shouldHandOutSpecificAmountOfCardsToSpecificPlayer1()
+	{
+		  player = mock(Player.class);
+		 
+		  Deck d = new Deck();
+		  Card first = d.get(0);
+		  d.handOutCard(1,player);
+
+		  verify(player, times(1)).setHand(first);
 	}
 	
 }
