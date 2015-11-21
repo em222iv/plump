@@ -24,4 +24,9 @@ public class Deck {
 		
 	}
 
+	public void get() {
+		throw new UnsupportedOperationException();
+		
+	}
+
 }
