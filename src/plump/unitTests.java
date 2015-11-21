@@ -139,10 +139,10 @@ public class unitTests {
 		  verify(player, times(1)).setHand(first);
 	}
 	
-	@Test
-	public void shouldHavepickCardMethod()
+	@Test(expected=NullPointerException.class)
+	public void shouldHavepickCardMethod() throws Exception
 	{
-		this.player.pickCard();
+		this.player.pickCard(null);
 		  
 		  
 	}
