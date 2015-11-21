@@ -26,6 +26,11 @@ public class unitTests {
 	public void shouldPrintCardWithToStringMethod() {
 		assertEquals(this.card.toString(),"ACE of HEARTS");
 	}
+	@Test
+	public void shouldGetDeckSizeOf52()
+	{
+		assertEquals(52,this.deck.size());
+	}
 	
 	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
@@ -133,5 +138,6 @@ public class unitTests {
 
 		  verify(player, times(1)).setHand(first);
 	}
+	
 	
 }
