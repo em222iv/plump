@@ -14,7 +14,7 @@ public class unitTests {
 	private Player player = null;
 	
 	@Before
-	public void shouldCallCardConstrucotrWithValueAndSuitAndReturnACard() 
+	public void shouldInstantiateTheDifferentClasses() 
 	{
 		this.card = new Card(Suit.HEARTS,Value.ACE);
 		this.deck = new Deck();
@@ -99,6 +99,9 @@ public class unitTests {
 		assertEquals("Siri",this.player.getName());
 	}
 	
-
-	
+	@Test
+	public void test()  
+	{
+		this.player.getHand();
+	}
 }
