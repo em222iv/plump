@@ -74,9 +74,8 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	
 	@Test(expected=NullPointerException.class)
-	public void test()
+	public void shouldGetNullPointerSinceArrayListHasNotBeenInstantiated()
 	{
 		Deck deck = new Deck();
 		assertNull(deck.size());
