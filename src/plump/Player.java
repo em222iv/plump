@@ -3,10 +3,10 @@ package plump;
 public class Player {
 	
 	private String name;
-	public Player(String object) {
-		if(object == null)
+	public Player(String _name) {
+		if(_name == null)
 			throw new IllegalArgumentException();
-		this.name = object;
+		this.name = _name;
 	}
 
 	public String getName() {

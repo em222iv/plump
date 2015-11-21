@@ -102,7 +102,7 @@ public class unitTests {
 	}
 	
 	@Test
-	public void shouldThrownExcpetionWhenCalled()
+	public void shouldReturnThePlayersName()
 	{
 		Player player1 = new Player("Player1");
 		assertEquals("Player1",player1.getName());
