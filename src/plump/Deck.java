@@ -19,4 +19,9 @@ public class Deck {
 		return deck.size();
     }
 
+	public void handOutCard() {
+		throw new UnsupportedOperationException();
+		
+	}
+
 }
