@@ -55,8 +55,9 @@ public class DeckTest {
 	@Test
 	public void shouldRemoveSpecificCardFromDeck()
 	{	
-		
+		this.deck.add(this.card);
 		this.deck.remove(this.card);
+		assertEquals(0,this.deck.size());
 	}
 	
 }
