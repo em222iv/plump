@@ -81,8 +81,8 @@ public class unitTests {
 		deck.handOutCard();
 	}
 	
-	@Test(expected=UnsupportedOperationException.class)
-	public void shouldThrowshouldTrowUnsupportedOperationExceptionWhenCalled() throws Exception
+	@Test
+	public void shouldThrowshouldTrowUnsupportedOperationExceptionWhenCalled()
 	{
 		Deck deck = new Deck();
 		deck.get(1);

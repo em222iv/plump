@@ -24,8 +24,8 @@ public class Deck {
 		
 	}
 
-	public void get() {
-		throw new UnsupportedOperationException();
+	public Card get(int index) {
+		return deck.get(index);
 		
 	}
 
