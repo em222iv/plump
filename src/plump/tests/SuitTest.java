@@ -1,23 +1,13 @@
-package plump;
-import static org.junit.Assert.*;
-import org.mockito.Mockito;
+package plump.tests;
 
-import plump.src.Card;
-import plump.src.Suit;
-import plump.src.Value;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class plumpTests {
+import plump.Suit;
+
+public class SuitTest {
 	private Suit[] s = null;
-	private Value[] v = null;
-	@Test
-	
-	public void shouldSetCardVariableViaConstructorAndGetZero() {
-		Card card = new Card(0);
-		assertEquals(card.getA(),0);
-	}
-	
 	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
 	{
@@ -46,16 +36,6 @@ public class plumpTests {
 	    assertEquals(s[3], Suit.CLUBS);
 	}
 	
-	@Test
-	public void shouldExistValueEnumWithValueAce()
-	{
-		 v  = Value.values();
-	     assertEquals(v[0], Value.ACE);
-	}
 	
-	@Test
-	public void shouldExist13DifferentValuesinValueEnum()
-	{
-	     assertEquals(13, Value.values().length);
-	}
+
 }
