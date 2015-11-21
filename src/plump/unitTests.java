@@ -140,7 +140,7 @@ public class unitTests {
 	}
 	
 	@Test
-	public void test()
+	public void shouldHavepickCardMethod()
 	{
 		this.player.pickCard();
 		  
