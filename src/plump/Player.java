@@ -25,7 +25,6 @@ public class Player {
 
 	public Deck getHand() {
 		return hand;
-		
 	}
 
 	public void pickCard(Card obj) {
