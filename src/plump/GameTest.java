@@ -4,11 +4,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class gameTest {
+public class GameTest {
 
 	@Test
-	public void test() {
+	public void shouldExistGameConstructor() {
 		new Game();
 	}
-
 }
