@@ -34,12 +34,6 @@ public class unitTests {
 	}
 	
 	@Test
-	public void test()
-	{
-		this.deck.add(this.card);
-	}
-	
-	@Test
 	public void shouldExistSuitEnumWithSuitHeartValue()
 	{
 	    s  = Suit.values();
