@@ -101,8 +101,9 @@ public class unitTests {
 	
 	@Test(expected=NullPointerException.class)
 	public void shouldThrowException() throws Exception
-	{
-		this.player.getHand();
+	{	
+		this.player.setHand(this.card);
+		assertEquals(this.card, this.player.getHand());
 	}
 	
 	@Test
