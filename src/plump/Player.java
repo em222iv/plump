@@ -23,8 +23,8 @@ public class Player {
 		return hand.size();
 	}
 
-	public void getHand() {
-		// TODO Auto-generated method stub
+	public Deck getHand() {
+		return hand;
 		
 	}
 

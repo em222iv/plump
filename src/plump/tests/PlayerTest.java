@@ -52,14 +52,14 @@ public class PlayerTest {
 		Deck d = new Deck();
 		d.add(c);
 		this.player.giveCard(c);
-		 assertEquals(c,this.player.getHand());
+		assertEquals(1,this.player.getHand().size());
 	}
 
 	@Test
 	public void shouldReturnTheAmountOfCardsOnPlayerHand()
 	{
 		this.player.giveCard(new Card(Suit.HEARTS,Value.ACE));
-		assertEquals(1,this.player.amountOfCardsOnHand());
+		assertSame(1,this.player.amountOfCardsOnHand());
 	}
 	
 	@Test
