@@ -142,8 +142,15 @@ public class unitTests {
 	@Test(expected=NullPointerException.class)
 	public void shouldReturnNullWhenInputIsNull() throws Exception
 	{
-		this.player.pickCard(null);
-		  
+		this.player.pickCard(null);  
+	}
+	
+	@Test
+	public void test() 
+	{	
+		card = mock(Card.class);
+		this.player.pickCard(card);
+		
 	}
 	
 }

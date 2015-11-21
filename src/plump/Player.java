@@ -31,7 +31,6 @@ public class Player {
 
 	public void pickCard(Object obj) {
 		throw new NullPointerException();
-		
 	}
 
 }
