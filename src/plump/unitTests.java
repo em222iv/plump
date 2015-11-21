@@ -109,7 +109,7 @@ public class unitTests {
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void test()  throws Exception
+	public void shouldThrownExcpetionWhenCalled()  throws Exception
 	{
 		Player player1 = new Player("Player1");
 		player1.getName();

@@ -8,7 +8,7 @@ public class Player {
 	}
 
 	public void getName() {
-		// TODO Auto-generated method stub
+		throw new IllegalArgumentException();
 		
 	}
 
