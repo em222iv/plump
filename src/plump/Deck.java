@@ -4,6 +4,7 @@ import java.util.*;
 public class Deck {
 	private ArrayList<Card> deck;
 	public Deck(){
+		deck = new ArrayList<Card>();
 	}
 	
     public int size(){
@@ -15,7 +16,7 @@ public class Deck {
 			throw new IllegalArgumentException();
 		for(int i = 0; i <= numberOfCards;i++){
 			Card curr = deck.remove(0);
-			player.setHand(curr);
+			player.giveCard(curr);
 		}
 	}
 
@@ -24,7 +25,6 @@ public class Deck {
 	}
 
 	public void resetDeck() {
-		deck = new ArrayList<Card>();
 		Suit[] suits = Suit.values();
 		Value[] values = Value.values();
 		
@@ -36,8 +36,7 @@ public class Deck {
 	}
 
 	public void add(Card card) {
-		// TODO Auto-generated method stub
-		
+		deck.add(card);
 	}
 
 }

@@ -109,14 +109,14 @@ public class unitTests {
 	@Test
 	public void ShouldAddCardToPlayerHand()
 	{
-		this.player.setHand(this.card);
+		this.player.giveCard(this.card);
 	}
 	
 
 	@Test
 	public void shouldReturnTheAmountOfCardsOnPlayerHand()
 	{
-		this.player.setHand(this.card);
+		this.player.giveCard(this.card);
 		assertEquals(1,this.player.amountOfCardsOnHand());
 	}
 	
@@ -136,7 +136,7 @@ public class unitTests {
 		  Card first = d.get(0);
 		  d.handOutCardToPlayer(1,player);
 
-		  verify(player, times(1)).setHand(first);
+		  verify(player, times(1)).giveCard(first);
 	}
 	
 }

@@ -21,7 +21,7 @@ public class Player {
 		return hand;
 	}
 
-	public void setHand(Card object) {
+	public void giveCard(Card object) {
 		hand.add(object);
 	}
 
@@ -29,8 +29,8 @@ public class Player {
 		return hand.size();
 	}
 
-	public void pickCard(Card obj) {
-		hand.remove(obj);
-	}
+//	public void pickCard(Card obj) {
+//		hand.remove(obj);
+//	}
 
 }
