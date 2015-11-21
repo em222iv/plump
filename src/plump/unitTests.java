@@ -81,6 +81,14 @@ public class unitTests {
 		assertNull(deck.size());
 	}
 	
+	@Test
+	public void test() 
+	{
+		Deck deck = new Deck();
+		assertEquals(deck.size(),1);
+		
+	}
+	
 
 	
 }
