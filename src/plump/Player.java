@@ -30,7 +30,8 @@ public class Player {
 	}
 
 	public void pickCard(Object obj) {
-		throw new NullPointerException();
+		if(obj == null)
+			throw new NullPointerException();
 	}
 
 }
