@@ -15,10 +15,6 @@ public class Player {
 		return this.name;
 	}
 
-	public Deck getHand() {
-		return hand;
-	}
-
 	public void giveCard(Card object) {
 		hand.add(object);
 	}

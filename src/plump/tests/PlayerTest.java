@@ -44,6 +44,12 @@ public class PlayerTest {
 		this.player.giveCard(new Card(Suit.HEARTS,Value.ACE));
 	}
 	
+	
+	@Test
+	public void shouldExistGethandMethod()
+	{
+		this.player.getHand());
+	}
 
 	@Test
 	public void shouldReturnTheAmountOfCardsOnPlayerHand()
