@@ -95,5 +95,12 @@ public class unitTests {
 		new Player(null);
 	}
 	
+	@Test
+	public void shouldNotThrowExceptionOnCorrectInput()
+	{
+		Player player1 = new Player("Player1");
+
+	}
+	
 	
 }
