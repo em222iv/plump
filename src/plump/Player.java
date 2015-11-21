@@ -1,15 +1,16 @@
 package plump;
 
 public class Player {
-
-	public Player(Object object) {
+	
+	private String name;
+	public Player(String object) {
 		if(object == null)
 			throw new IllegalArgumentException();
+		this.name = object;
 	}
 
-	public void getName() {
-		throw new IllegalArgumentException();
-		
+	public String getName() {
+		return this.name;
 	}
 
 }

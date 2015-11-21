@@ -101,8 +101,8 @@ public class unitTests {
 		Player player1 = new Player("Player1");
 	}
 	
-	@Test(expected=IllegalArgumentException.class)
-	public void shouldThrownExcpetionWhenCalled()  throws Exception
+	@Test
+	public void shouldThrownExcpetionWhenCalled()
 	{
 		Player player1 = new Player("Player1");
 		assertEquals("Player1",player1.getName());
