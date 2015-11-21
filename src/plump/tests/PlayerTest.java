@@ -7,6 +7,7 @@ import static org.mockito.Mockito.verify;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 import org.mockito.Spy;
 
 import plump.Card;
@@ -75,8 +76,5 @@ public class PlayerTest {
 		  assertEquals(7,player.amountOfCardsOnHand());
 		  
 	}
-	
-	
-	
-	
+		
 }
