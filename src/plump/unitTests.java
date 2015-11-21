@@ -74,15 +74,8 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	@Test
-	public void shouldCallDeckConstructorWith0AndSetPublicVariable() 
-	{
-		Deck deck = new Deck(0);
-		assertEquals(deck.asd,0);
-	}
-	
 	@Test(expected=UnsupportedOperationException.class)
-	public void test() throws Exception 
+	public void shouldTthrowExcBecauseNotImplemented() throws Exception 
 	{
 		Deck deck = new Deck();
 		deck.size();
