@@ -7,7 +7,7 @@ public class Deck {
 		deck = new ArrayList<Card>();
 		deck.add(new Card(Suit.HEARTS,Value.ACE));
 	}
-
+	
     public int size(){
 		return deck.size();
     }
