@@ -104,4 +104,10 @@ public class unitTests {
 	{
 		this.player.getHand();
 	}
+	
+	@Test
+	public void test()  
+	{
+		this.player.setHand();
+	}
 }
