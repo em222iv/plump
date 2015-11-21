@@ -74,9 +74,8 @@ public class unitTests {
 		Deck deck = new Deck();
 	}
 	
-	
 	@Test
-	public void test() 
+	public void shouldGetACompleteDeckOf52Cards() 
 	{
 		Deck deck = new Deck();
 		assertEquals(deck.size(),52);	
