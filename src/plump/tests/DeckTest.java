@@ -55,7 +55,7 @@ public class DeckTest {
 	@Test
 	public void testExistRemoveCardMethodOnDeck()
 	{
-		this.deck.remove()
+		this.deck.remove();
 	}
 	
 }
