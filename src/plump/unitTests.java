@@ -99,7 +99,13 @@ public class unitTests {
 	public void shouldNotThrowExceptionOnCorrectInput()
 	{
 		Player player1 = new Player("Player1");
-
+	}
+	
+	@Test
+	public void test()
+	{
+		Player player1 = new Player("Player1");
+		player1.getName();
 	}
 	
 	
