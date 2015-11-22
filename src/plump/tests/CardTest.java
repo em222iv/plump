@@ -21,7 +21,14 @@ public class CardTest {
 	
 	@Test
 	public void shouldReturnCardWithToStringMethod() {
+		
 		assertEquals(this.card.toString(),"ACE of HEARTS");
+	}
+	
+	@Test
+	public void test() {
+		
+		
 	}
 
 }
