@@ -26,8 +26,7 @@ public class GameTest {
 		Player player;
 	@Test
 	public void shouldInstantiatePlayerWhenNewGameIsInstantiated() {
-
-		 player = mock(Player.class);
+		 player = new Player("name", new Deck());
 		 game = new Game(player);
 		 assertNotNull(game.player);
 	}
