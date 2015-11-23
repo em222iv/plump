@@ -15,21 +15,20 @@ public class GameTest {
 
 	 @Mock
 	    Game game;
+	 	Player player;
 
 	@Test
 	public void shouldExistGameConstructor() {
 		 game = mock(Game.class);
 		 verify(game, times(1));
 	}
-	
-	@Mock
-		Player player;
+
 	@Test
 	public void shouldTakePlayerAndAmountOfRoundsToSetVariables() {
-		game = new Game(player,5);
+		player = new Player("test",new Deck());
+		game = new Game(player,5, new Deck());
 		assertEquals(5,game.rounds);
 		assertNotNull(game.player);
 	}
-
 	 
 }
