@@ -25,11 +25,10 @@ public class GameTest {
 	@Mock
 		Player player;
 	@Test
-	public void shouldTakePlayerAndAmountOfRoundsToSetPrivateVariables() {
+	public void shouldTakePlayerAndAmountOfRoundsToSetVariables() {
 		game = new Game(player,5);
 		assertEquals(5,game.rounds);
-		 assertNotNull(game.player);
-		
+		assertNotNull(game.player);
 	}
 
 	 
