@@ -5,6 +5,9 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
+import java.awt.List;
+import java.util.ArrayList;
+
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -13,7 +16,7 @@ import org.mockito.Spy;
 
 public class GameTest {
 
-	 @Mock
+	@Mock
 	    Game game;
 	 	Player player;
 
@@ -35,8 +38,8 @@ public class GameTest {
 	@Test 
 	public void test() {
 		game = mock(Game.class);
-		game.genereateAI();
-		
+		ArrayList<Player> pList = new ArrayList<Player>();
+		Mockito.doReturn(pList).when(game).genereateAI();
 	}
 	 
 }

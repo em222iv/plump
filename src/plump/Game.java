@@ -10,7 +10,7 @@ public class Game {
 		this.rounds = _rounds;
 		this.deck = _deck;
 	}
-
+	
 	public void genereateAI() {
 		// TODO Auto-generated method stub
 		
