@@ -29,6 +29,7 @@ public class GameTest {
 		game = new Game(player,5, new Deck());
 		assertEquals(5,game.rounds);
 		assertNotNull(game.player);
+		assertNotNull(game.deck);
 	}
 	 
 }
