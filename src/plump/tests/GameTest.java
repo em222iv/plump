@@ -1,4 +1,4 @@
-package plump;
+package plump.tests;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -11,6 +11,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
+
+import plump.Deck;
+import plump.Game;
+import plump.Player;
 
 public class GameTest {
 
@@ -55,7 +59,7 @@ public class GameTest {
 	}
 	
 	@Test(expected=UnsupportedOperationException.class)
-	public void shouldThrowExceptionOnNullInput() throws Exception
+	public void shouldThrowNotImplementedException() throws Exception
 	{
 		game = spy(new Game(player,5, new Deck()));
 		game.newRound();

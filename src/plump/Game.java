@@ -3,9 +3,9 @@ package plump;
 import java.util.ArrayList;
 
 public class Game {
-	int rounds = 0;
-	Player player;
-	Deck deck;
+	public int rounds = 0;
+	public Player player;
+	public Deck deck;
 	ArrayList<Player> pList;
 	
 	public Game(Player _player,int _rounds, Deck _deck) {
