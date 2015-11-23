@@ -22,5 +22,10 @@ public class Game {
 		this.pList.add(new Player("Player4", new Deck()));
 		return this.pList;
 	}
+
+	public void newRound() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
