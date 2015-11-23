@@ -48,7 +48,7 @@ public class GameTest {
 	}
 	
 	@Test
-	public void test() {
+	public void shouldCallnewRoundOneTime() {
 		 game = mock(Game.class);
 		 game.newRound();
 		 verify(game, times(1)).newRound();
