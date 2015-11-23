@@ -39,11 +39,19 @@ public class GameTest {
 		ArrayList<Player> pList = new ArrayList<Player>();
 		Mockito.doReturn(pList).when(game).genereateAI();
 	}
+	
 	@Test 
 	public void shouldReturnArrayListWith4Players() {
 		game = spy(new Game(player,5, new Deck()));
 		ArrayList<Player> pList = game.genereateAI();
 		assertEquals(4,pList.size());
+	}
+	
+	@Test
+	public void test() {
+		 game = mock(Game.class);
+		 game.newRound();
+		 verify(game, times(1)).newRound();
 	}
 	 
 }

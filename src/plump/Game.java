@@ -21,7 +21,6 @@ public class Game {
 		this.pList.add(new Player("Player3", new Deck()));
 		this.pList.add(new Player("Player4", new Deck()));
 		return this.pList;
-		
 	}
 	
 }
