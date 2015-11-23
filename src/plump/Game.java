@@ -1,9 +1,12 @@
 package plump;
 
+import java.util.ArrayList;
+
 public class Game {
 	int rounds = 0;
 	Player player;
 	Deck deck;
+	ArrayList<Player> pList = new ArrayList<Player>();
 	
 	public Game(Player _player,int _rounds, Deck _deck) {
 		this.player = _player;
@@ -11,8 +14,8 @@ public class Game {
 		this.deck = _deck;
 	}
 	
-	public void genereateAI() {
-		// TODO Auto-generated method stub
+	public ArrayList<Player> genereateAI() {
+		return this.pList;
 		
 	}
 	
