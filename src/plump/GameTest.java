@@ -35,6 +35,7 @@ public class GameTest {
 	public void test() {
 		 
 		game = new Game(player,5);
+		assertEquals(5,game.rounds);
 		
 	}
 
