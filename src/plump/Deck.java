@@ -15,7 +15,7 @@ public class Deck {
 	public void handOutCardToPlayer(int numberOfCards,Player player) {
 		if(numberOfCards == 0)
 			throw new IllegalArgumentException();
-		for(int i = 0; i <= numberOfCards;i++){
+		for(int i = 0; i < numberOfCards;i++){
 			Card curr = deck.remove(0);
 			player.giveCard(curr);
 		}

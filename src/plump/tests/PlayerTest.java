@@ -2,10 +2,11 @@ package plump.tests;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
+
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.Spy;
+import org.mockito.Mockito;
 
 import plump.Card;
 import plump.Deck;
@@ -15,81 +16,86 @@ import plump.Value;
 
 public class PlayerTest {
 
-	private String name = "Siri";
-	private Deck hand = new Deck();
-	private Player player = null;
-	
+	private Deck hand;
+ 	private Player playerMock;
+ 	private Player playerSpy;
+		 
 	@Before
-	public void shouldInstantiateTheDifferentClasses() 
-	{
-		this.player = new Player(this.name, this.hand);
+	public void setUp() {
+	  hand = new Deck();
+	  playerMock = mock( Player.class );
+	  playerSpy = spy( new Player("spy", new Deck()));
 	}
-	
+
 	@Test(expected=IllegalArgumentException.class)
 	public void shouldThrowExceptionOnNullInput() throws Exception
 	{
 		new Player(null,this.hand);
 	}
+	
 	@Test
 	public void shouldThrownExcpetionWhenCalled()  
 	{
-		assertEquals("Siri",this.player.getName());
+		Player siri = new Player("Siri",new Deck());
+		assertEquals("Siri",siri.getName());
 	}
 	
 	@Test
 	public void ShouldAddCardToPlayerHand()
 	{
-		this.player.giveCard(new Card(Suit.HEARTS,Value.ACE));
+		this.playerMock.giveCard(new Card(Suit.HEARTS,Value.ACE));
 	}
-	
 	
 	@Test
 	public void shouldExistGethandMethod()
-	{
+	{	
 		Card c = new Card(Suit.CLUBS,Value.ACE); 
 		Deck d = new Deck();
 		d.add(c);
-		this.player.giveCard(c);
-		assertEquals(1,this.player.getHand().size());
+		this.playerSpy.giveCard(c);
+		assertEquals(1,this.playerSpy.getHand().size());
 	}
 
 	@Test
 	public void shouldReturnTheAmountOfCardsOnPlayerHand()
 	{
-		this.player.giveCard(new Card(Suit.HEARTS,Value.ACE));
-		assertSame(1,this.player.amountOfCardsOnHand());
+		playerSpy = spy(new Player("lisa",new Deck()));
+		playerSpy.giveCard(new Card(Suit.HEARTS,Value.ACE));
+		assertSame(1,this.playerSpy.amountOfCardsOnHand());
 	}
 	
 	@Test
-	public void shouldMockToSeeIfDeckIsDealingToPLayer()
+	public void shouldMockToSeeIfDeckIsDealingToPlayer()
 	{
-		  player = mock(Player.class);
+		  Player playerMock = mock(Player.class);
 		  Deck d = new Deck();
 		  d.resetDeck();
-		  Card first = d.get(0);
-		  d.handOutCardToPlayer(1,player);
-		  verify(player, times(1)).giveCard(first);
+		  d.handOutCardToPlayer(1,playerMock);
+		  verify(playerMock, times(1)).giveCard(any(Card.class));
 	}
 	
-	@Spy 
-	Player p = new Player("test",this.hand);
 	@Test
 	public void shouldHave7CardsOnHand()
-	{
+	{		
+		  Player play = spy(new Player("test",this.hand));
 		  Deck d = new Deck();
 		  d.resetDeck();
-		  d.handOutCardToPlayer(6,player);
-		  assertEquals(7,player.amountOfCardsOnHand());	  
+		  d.handOutCardToPlayer(7,play);
+		  assertEquals(7,play.amountOfCardsOnHand());	  
 	}
 	
 	@Test
-	public void shouldGiveCardToPlayerAndThenDiscardItLeavingPlayer()
+	public void shouldGiveCardToPlayerAndThenDiscardItLeavingPlayerWithZeroCards()
 	{	
 		  Player player = new Player("test",this.hand);
 		  Card c = new Card(Suit.CLUBS,Value.ACE);
 		  player.giveCard(c);
 		  player.pickCard(c);
 		  assertEquals(0,player.amountOfCardsOnHand());
+	}
+	@After public void reset_mocks() {
+	    Mockito.reset(playerMock);
+	    Mockito.reset(playerSpy);
 	}
 		
 }
