@@ -2,7 +2,7 @@ package plump;
 
 public class Round {
 	
-	public Round() {
+	public Round(Deck deck) {
 		
 	}
 }
