@@ -28,20 +28,8 @@ public class GameTest {
 	public void test() {
 		
 		 player = mock(Player.class);
-		 
 		 game = new Game(player);
-		 
-		 
-	}
-	
-	@Spy 
-	Player p = new Player("test");
-	@Test
-	public void shouldHave7CardsOnHand()
-	{
-		  Deck d = new Deck();
-
-		  verify(player,times(1));
+		
 	}
 	
 }

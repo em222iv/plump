@@ -16,18 +16,19 @@ import plump.Value;
 public class PlayerTest {
 
 	private String name = "Siri";
+	private Deck hand = new Deck();
 	private Player player = null;
 	
 	@Before
 	public void shouldInstantiateTheDifferentClasses() 
 	{
-		this.player = new Player(this.name);
+		this.player = new Player(this.name, this.hand);
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void shouldThrowExceptionOnNullInput() throws Exception
 	{
-		new Player(null);
+		new Player(null,this.hand);
 	}
 	@Test
 	public void shouldThrownExcpetionWhenCalled()  
@@ -67,12 +68,11 @@ public class PlayerTest {
 		  d.resetDeck();
 		  Card first = d.get(0);
 		  d.handOutCardToPlayer(1,player);
-
 		  verify(player, times(1)).giveCard(first);
 	}
 	
 	@Spy 
-	Player p = new Player("test");
+	Player p = new Player("test",this.hand);
 	@Test
 	public void shouldHave7CardsOnHand()
 	{
@@ -85,8 +85,7 @@ public class PlayerTest {
 	@Test
 	public void shouldGiveCardToPlayerAndThenDiscardItLeavingPlayer()
 	{	
-		  Player player = new Player("test");
-		  Deck d = new Deck();
+		  Player player = new Player("test",this.hand);
 		  Card c = new Card(Suit.CLUBS,Value.ACE);
 		  player.giveCard(c);
 		  player.pickCard(c);

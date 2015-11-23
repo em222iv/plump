@@ -49,7 +49,7 @@ public class DeckTest {
 	@Test(expected=IllegalArgumentException.class)
 	public void shouldThrowExceptionOnZeroInput() throws Exception
 	{
-		this.deck.handOutCardToPlayer(0,new Player("Siri"));
+		this.deck.handOutCardToPlayer(0,new Player("Siri",new Deck()));
 	}
 	
 	@Test
