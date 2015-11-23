@@ -29,7 +29,7 @@ public class GameTest {
 		
 		 player = mock(Player.class);
 		 game = new Game(player);
-		
+		 assertNotNull(game.player);
 	}
-	
+	 
 }
