@@ -9,7 +9,7 @@ import plump.Round;
 public class RoundTest {
 
 	@Test
-	public void test() {
+	public void shouldSendFreshDeckIntoRound() {
 		Round round = new Round(new Deck());
 	}
 
