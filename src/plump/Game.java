@@ -6,7 +6,7 @@ public class Game {
 	int rounds = 0;
 	Player player;
 	Deck deck;
-	ArrayList<Player> pList = new ArrayList<Player>();
+	ArrayList<Player> pList;
 	
 	public Game(Player _player,int _rounds, Deck _deck) {
 		this.player = _player;
@@ -15,6 +15,7 @@ public class Game {
 	}
 	
 	public ArrayList<Player> genereateAI() {
+		this.pList = new ArrayList<Player>();
 		return this.pList;
 		
 	}
