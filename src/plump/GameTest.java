@@ -31,5 +31,12 @@ public class GameTest {
 		assertNotNull(game.player);
 		assertNotNull(game.deck);
 	}
+	
+	@Test 
+	public void test() {
+		game = mock(Game.class);
+		game.genereateAI();
+		
+	}
 	 
 }
