@@ -23,8 +23,8 @@ public class Game {
 		return this.pList;
 	}
 
-	public void newRound() {
-		// TODO Auto-generated method stub
+	public void newRound() throws Exception {
+		throw new UnsupportedOperationException();
 		
 	}
 	
