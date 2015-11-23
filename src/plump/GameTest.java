@@ -40,7 +40,7 @@ public class GameTest {
 		Mockito.doReturn(pList).when(game).genereateAI();
 	}
 	@Test 
-	public void test() {
+	public void shouldReturnArrayListWith4Players() {
 		game = spy(new Game(player,5, new Deck()));
 		ArrayList<Player> pList = game.genereateAI();
 		assertEquals(4,pList.size());
