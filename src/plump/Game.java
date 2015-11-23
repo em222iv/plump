@@ -5,12 +5,10 @@ public class Game {
 	Player player;
 	Deck deck;
 	
-	public Game(Player _player,int _rounds, Deck deck) {
+	public Game(Player _player,int _rounds, Deck _deck) {
 		this.player = _player;
 		this.rounds = _rounds;
-		this.deck = deck;
+		this.deck = _deck;
 	}
-	
-	
 	
 }

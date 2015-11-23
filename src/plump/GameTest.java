@@ -24,7 +24,7 @@ public class GameTest {
 	}
 
 	@Test
-	public void shouldTakePlayerAndAmountOfRoundsToSetVariables() {
+	public void shouldTakePlayerAndAmountOfRoundsAndDeckToSetInternalVariables() {
 		player = new Player("test",new Deck());
 		game = new Game(player,5, new Deck());
 		assertEquals(5,game.rounds);
