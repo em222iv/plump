@@ -31,5 +31,13 @@ public class GameTest {
 		 game = new Game(player);
 		 assertNotNull(game.player);
 	}
+
+	@Test
+	public void test() {
+		 
+		game = new Game(player,5);
+		
+	}
+
 	 
 }

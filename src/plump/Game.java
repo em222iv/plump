@@ -7,6 +7,4 @@ public class Game {
 		this.player = _player;
 	}
 	
-	
-	
 }
