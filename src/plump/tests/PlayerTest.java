@@ -83,7 +83,7 @@ public class PlayerTest {
 	}
 	
 	@Test
-	public void shouldGiveCardToPlayerAndThenDiscardItLeavingPlayerZeroCards()
+	public void shouldGiveCardToPlayerAndThenDiscardItLeavingPlayer()
 	{	
 		  Player player = new Player("test");
 		  Deck d = new Deck();
