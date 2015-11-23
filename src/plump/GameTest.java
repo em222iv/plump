@@ -53,5 +53,13 @@ public class GameTest {
 		 game.newRound();
 		 verify(game, times(1)).newRound();
 	}
+	
+	@Test(expected=UnsupportedOperationException.class)
+	public void shouldThrowExceptionOnNullInput() throws Exception
+	{
+		game = spy(new Game(player,5, new Deck()));
+		game.newRound();
+		
+	}
 	 
 }
