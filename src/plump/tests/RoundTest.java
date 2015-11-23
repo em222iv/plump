@@ -8,7 +8,7 @@ public class RoundTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		Round round = new Round();
 	}
 
 }
