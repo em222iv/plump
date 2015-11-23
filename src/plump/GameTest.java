@@ -36,10 +36,16 @@ public class GameTest {
 	}
 	
 	@Test 
-	public void test() {
+	public void shouldReturnAnArrayList() {
 		game = mock(Game.class);
 		ArrayList<Player> pList = new ArrayList<Player>();
 		Mockito.doReturn(pList).when(game).genereateAI();
+	}
+	@Test 
+	public void test() {
+		game = mock(Game.class);
+		ArrayList<Player> pList = game.genereateAI();
+		assertEquals(4,pList.size());
 	}
 	 
 }

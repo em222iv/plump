@@ -16,6 +16,7 @@ public class Game {
 	
 	public ArrayList<Player> genereateAI() {
 		this.pList = new ArrayList<Player>();
+		
 		return this.pList;
 		
 	}
