@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 
@@ -26,13 +25,6 @@ public class GameTest {
 	  playerMock = mock( Player.class );
 	}
 	    
-
-//	@Test
-//	public void shouldExistGameConstructor() {
-//		 
-//		 verify(this.game, times(1));
-//	}
-
 	@Test
 	public void shouldTakePlayerAndAmountOfRoundsAndDeckToSetInternalVariables() {
 		Game game = new Game(playerMock,5, new Deck());

@@ -25,7 +25,6 @@ public class Game {
 
 	public void newRound() throws Exception {
 		throw new UnsupportedOperationException();
-		
 	}
 	
 }
