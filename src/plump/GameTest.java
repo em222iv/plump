@@ -25,17 +25,10 @@ public class GameTest {
 	@Mock
 		Player player;
 	@Test
-	public void shouldInstantiatePlayerWhenNewGameIsInstantiated() {
-		 player = new Player("name", new Deck());
-		 game = new Game(player);
-		 assertNotNull(game.player);
-	}
-
-	@Test
-	public void test() {
-		 
+	public void shouldTakePlayerAndAmountOfRoundsToSetPrivateVariables() {
 		game = new Game(player,5);
 		assertEquals(5,game.rounds);
+		 assertNotNull(game.player);
 		
 	}
 

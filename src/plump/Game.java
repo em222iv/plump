@@ -1,15 +1,12 @@
 package plump;
 
 public class Game {
-	int rounds = 0;
-	Player player;
-	public Game(Player _player) {
-		this.player = _player;
-	}
+	private int rounds = 0;
+	private Player player;
 	
-	public Game(Player _player,int rounds) {
+	public Game(Player _player,int _rounds) {
 		this.player = _player;
-		this.rounds = rounds;
+		this.rounds = _rounds;
 	}
 	
 }
