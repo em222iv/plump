@@ -25,8 +25,8 @@ public class GameTest {
 	@Mock
 		Player player;
 	@Test
-	public void test() {
-		
+	public void shouldInstantiatePlayerWhenNewGameIsInstantiated() {
+
 		 player = mock(Player.class);
 		 game = new Game(player);
 		 assertNotNull(game.player);
