@@ -13,4 +13,5 @@ public class Card {
 	public String toString (){
 		return value.name()+" of "+suit.name();
 	}
+	
 }

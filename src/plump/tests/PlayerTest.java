@@ -63,7 +63,6 @@ public class PlayerTest {
 	public void shouldMockToSeeIfDeckIsDealingToPLayer()
 	{
 		  player = mock(Player.class);
-		 
 		  Deck d = new Deck();
 		  d.resetDeck();
 		  Card first = d.get(0);
@@ -80,12 +79,11 @@ public class PlayerTest {
 		  Deck d = new Deck();
 		  d.resetDeck();
 		  d.handOutCardToPlayer(6,player);
-		  assertEquals(7,player.amountOfCardsOnHand());
-		  
+		  assertEquals(7,player.amountOfCardsOnHand());	  
 	}
 	
 	@Test
-	public void test()
+	public void shouldGiveCardToPlayerAndThenDiscardItLeavingPlayerZeroCards()
 	{	
 		  Player player = new Player("test");
 		  Deck d = new Deck();
@@ -93,7 +91,6 @@ public class PlayerTest {
 		  player.giveCard(c);
 		  player.pickCard(c);
 		  assertEquals(0,player.amountOfCardsOnHand());
-		
 	}
 		
 }
