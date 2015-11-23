@@ -21,14 +21,9 @@ public class RoundTest {
 	  gameMock = mock( Game.class );
 	  playerMock = mock( Player.class );
 	}
-	   
-	@Test
-	public void shouldSendFreshDeckIntoRound() {
-		Round round = new Round(new Deck());
-	}
 
 	@Test
-	public void test() {
+	public void shouldSendPlayersAndDeckToRound() {
 		Game game = new Game(playerMock,5,new Deck());
 		Round round = new Round(game.genereateAI(), new Deck());
 	}
