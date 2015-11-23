@@ -5,11 +5,11 @@ public class Player {
 	private String name;
 	private Deck hand;
 	
-	public Player(String _name) {
+	public Player(String _name,Deck _hand) {
 		if(_name == null)
 			throw new IllegalArgumentException();
 		this.name = _name;
-		hand = new Deck();
+		hand = _hand;
 	}
 
 	public String getName() {

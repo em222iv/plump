@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 
 public class GameTest {
 
@@ -19,6 +20,28 @@ public class GameTest {
 	public void shouldExistGameConstructor() {
 		 game = mock(Game.class);
 		 verify(game, times(1));
+	}
+	
+	@Mock
+		Player player;
+	@Test
+	public void test() {
+		
+		 player = mock(Player.class);
+		 
+		 game = new Game(player);
+		 
+		 
+	}
+	
+	@Spy 
+	Player p = new Player("test");
+	@Test
+	public void shouldHave7CardsOnHand()
+	{
+		  Deck d = new Deck();
+
+		  verify(player,times(1));
 	}
 	
 }
