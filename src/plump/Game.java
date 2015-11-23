@@ -16,7 +16,10 @@ public class Game {
 	
 	public ArrayList<Player> genereateAI() {
 		this.pList = new ArrayList<Player>();
-		
+		this.pList.add(this.player);
+		this.pList.add(new Player("Player2", new Deck()));
+		this.pList.add(new Player("Player3", new Deck()));
+		this.pList.add(new Player("Player4", new Deck()));
 		return this.pList;
 		
 	}

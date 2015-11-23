@@ -1,9 +1,7 @@
 package plump;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 import java.awt.List;
 import java.util.ArrayList;
@@ -43,7 +41,7 @@ public class GameTest {
 	}
 	@Test 
 	public void test() {
-		game = mock(Game.class);
+		game = spy(new Game(player,5, new Deck()));
 		ArrayList<Player> pList = game.genereateAI();
 		assertEquals(4,pList.size());
 	}
