@@ -54,7 +54,7 @@ public class RoundTest {
 		Round r = mock(Round.class);
 		Player firstInList = pList.get(0);
 		when(r.chooseDealer(pList)).thenReturn(firstInList);
-		verify(r,times(1)).putDealerAtBackOfDeck();;
+		verify(r,times(1)).putPlayerAtBackOfDeck(pList.get(0),pList);
 	}
 
 }

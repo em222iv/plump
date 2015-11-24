@@ -12,9 +12,13 @@ public class Round {
 		this.round = _round;
 	}
 	public Object chooseDealer(ArrayList<Player> players) {
+		Player dealer
+		return dealer;
+	}
+	public void putDealerAtBackOfDeck(ArrayList<Player> players) {
 		Player dealer = players.remove(0);
 		players.add(dealer);
-		return dealer;
+		
 	}
 	
 	
