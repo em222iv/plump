@@ -6,23 +6,15 @@ public class Game {
 	public int rounds = 0;
 	public Player player;
 	public Deck deck;
-	ArrayList<Player> pList;
+	public ArrayList<Player> playerList;
 	
-	public Game(Player _player,int _rounds, Deck _deck) {
-		this.player = _player;
+	public Game(ArrayList<Player> _players,int _rounds, Deck _deck) {
+		this.player = _players.get(0);
 		this.rounds = _rounds;
 		this.deck = _deck;
-		this.pList = new ArrayList<Player>();
-		this.pList.add(this.player);
+		this.playerList = _players;
 	}
 	
-	public ArrayList<Player> genereateAI() {
-		this.pList.add(new Player("Player2", new Deck()));
-		this.pList.add(new Player("Player3", new Deck()));
-		this.pList.add(new Player("Player4", new Deck()));
-		return this.pList;
-	}
-
 	public void newRound(Player player) {
 		
 	}

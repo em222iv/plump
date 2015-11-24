@@ -8,7 +8,7 @@ public class Round {
 	public ArrayList<Player> players;
 	public Round(Game game) {
 		this.deck = game.deck;
-		this.players = game.pList;
+		this.players = game.playerList;
 		this.round = game.rounds;
 	}
 }

@@ -18,33 +18,27 @@ public class GameTest {
 	
 	private Game gameMock;
  	private Player playerMock;
-		 
+ 	private ArrayList<Player> pList;
+	 
 	@Before
 	public void setUp() {
 	  gameMock = mock( Game.class );
 	  playerMock = mock( Player.class );
+	  pList = new ArrayList<Player>();
+	  pList.add(new Player("player1", new Deck()));
+	  pList.add(new Player("Player2", new Deck()));
+	  pList.add(new Player("Player3", new Deck()));
+      pList.add(new Player("Player4", new Deck()));
+	 
 	}
 	    
 	@Test
 	public void shouldTakePlayerAndAmountOfRoundsAndDeckToSetInternalVariables() {
-		Game game = new Game(playerMock,5, new Deck());
+		Game game = new Game(pList,5, new Deck());
 		assertEquals(5,game.rounds);
 		assertNotNull(game.player);
 		assertNotNull(game.deck);
-	}
-	
-	@Test 
-	public void shouldReturnAnArrayList() {
-		gameMock = mock(Game.class);
-		ArrayList<Player> pList = new ArrayList<Player>();
-		Mockito.doReturn(pList).when(gameMock).genereateAI();
-	}
-	
-	@Test 
-	public void shouldReturnArrayListWith4Players() {
-		Game game = spy(new Game(playerMock,5, new Deck()));
-		ArrayList<Player> pList = game.genereateAI();
-		assertEquals(4,pList.size());
+		assertNotNull(game.playerList);
 	}
 	
 	@Test
@@ -54,13 +48,6 @@ public class GameTest {
 		 verify(gameMock, times(1)).newRound(playerMock);
 	}
 	
-	@Test
-	public void shouldThrowNotImplementedException() 
-	{
-		Game game = spy(new Game(playerMock,5, new Deck()));
-		game.newRound(playerMock);
-		
-	}
 	@After public void reset_mocks() {
 	    Mockito.reset(playerMock);
 	    Mockito.reset(gameMock);
