@@ -1,6 +1,7 @@
 package plump;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Round {
 	public Deck deck;
@@ -12,7 +13,8 @@ public class Round {
 		this.round = _round;
 	}
 	public Object chooseDealer(ArrayList<Player> players) {
-
+		Random rand = new Random();
+		return players.get(rand.nextInt(players.size()));
 	}
 	
 }
