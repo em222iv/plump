@@ -15,8 +15,8 @@ public class Game {
 		this.playerList = _players;
 	}
 	
-	public void newRound(Player player) {
-		
+	public Round newRound() {
+
 	}
 	
 }

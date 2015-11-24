@@ -44,9 +44,18 @@ public class GameTest {
 	@Test
 	public void shouldCallnewRoundOneTime() throws Exception {
 		 gameMock = mock(Game.class);
-		 gameMock.newRound(playerMock);
-		 verify(gameMock, times(1)).newRound(playerMock);
-		 assertNotNull(gameMock.round);
+		 gameMock.newRound();
+		 verify(gameMock, times(1)).newRound();
+
+		
+	}
+	
+	@Test
+	public void test() {
+	 Game game = new Game(pList,5, new Deck());
+	 game.newRound();
+	 assertNotNull(game.round);
+		
 	}
 	
 
