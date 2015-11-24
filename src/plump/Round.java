@@ -6,10 +6,10 @@ public class Round {
 	public Deck deck;
 	public int round;
 	public ArrayList<Player> players;
-	public Round(Game game) {
-		this.deck = game.deck;
-		this.players = game.playerList;
-		this.round = game.rounds;
+	public Round(ArrayList<Player> _players,int _round,Deck _deck) {
+		this.deck = _deck;
+		this.players = _players;
+		this.round = _round;
 	}
 }
  

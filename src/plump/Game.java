@@ -17,7 +17,7 @@ public class Game {
 	}
 	
 	public void newRound() {
-		this.round = new Round(this);
+		this.round = new Round(this.playerList,rounds,deck);
 	}
 	
 }
