@@ -27,13 +27,13 @@ public class RoundTest {
 	@Test
 	public void shouldInitiateRoundWithPlayerDeck() {
 		Game game = new Game(playerMock,5,deckMock);
-		Round round = new Round(game, deckMock);
+		Round round = new Round(game);
 	}
 	
 	@Test
 	public void shouldHaveInitializedInternalVariables() {
 		Game game = new Game(playerMock,5,deckMock);
-		Round round = new Round(game, deckMock);
+		Round round = new Round(game);
 		
 		assertNotNull(round.deck);
 		assertNotNull(round.players);
