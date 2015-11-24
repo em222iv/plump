@@ -12,7 +12,9 @@ public class Round {
 		this.round = _round;
 	}
 	public Object chooseDealer(ArrayList<Player> players) {
-		return players.get(0);
+		Player dealer = players.remove(0);
+		players.add(dealer);
+		return dealer;
 	}
 	
 	
