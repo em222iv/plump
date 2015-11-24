@@ -22,7 +22,6 @@ public class GameStart {
 //		deck.resetDeck();
 //		Game g = new Game(pList, rounds,deck);
 //		while(g.rounds > 0) {
-//			g.newRound
 //			g.round.chooseDealer();
 //			g.round.dealer.deal(5);
 //			g.round.setRoundSticks();

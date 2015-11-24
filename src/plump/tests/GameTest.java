@@ -51,7 +51,7 @@ public class GameTest {
 	}
 	
 	@Test
-	public void test() {
+	public void shouldInitializeANewRound() {
 	 Game game = new Game(pList,5, new Deck());
 	 game.newRound();
 	 assertNotNull(game.round);
