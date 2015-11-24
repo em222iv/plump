@@ -30,6 +30,15 @@ public class RoundTest {
 		Round round = new Round(game.genereateAI(), deckMock,3);
 	}
 	
+	@Test
+	public void test() {
+		Game game = new Game(playerMock,5,deckMock);
+		Round round = new Round(game.genereateAI(), deckMock,3);
+		
+		assertNotNull(round.game);
+	}
+	
+	
 	
 	
 }
