@@ -27,4 +27,13 @@ public class RoundTest {
 		Game game = new Game(playerMock,5,new Deck());
 		Round round = new Round(game.genereateAI(), new Deck());
 	}
+	
+	@Test
+	public void shouldSendPlayersAndDeckToRound() {
+		Game game = new Game(playerMock,5,new Deck());
+		Round round = new Round(game.genereateAI(), new Deck(),3);
+	}
+	
+	
+	
 }
