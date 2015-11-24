@@ -46,7 +46,10 @@ public class GameTest {
 		 gameMock = mock(Game.class);
 		 gameMock.newRound(playerMock);
 		 verify(gameMock, times(1)).newRound(playerMock);
+		 assertNotNull(gameMock.round);
 	}
+	
+
 	
 	@After public void reset_mocks() {
 	    Mockito.reset(playerMock);
