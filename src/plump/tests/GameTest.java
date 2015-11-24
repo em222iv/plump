@@ -54,11 +54,11 @@ public class GameTest {
 		 verify(gameMock, times(1)).newRound();
 	}
 	
-	@Test(expected=UnsupportedOperationException.class)
-	public void shouldThrowNotImplementedException() throws Exception
+	@Test
+	public void shouldThrowNotImplementedException() 
 	{
 		Game game = spy(new Game(playerMock,5, new Deck()));
-		game.newRound();
+		game.newRound(playerMock);
 		
 	}
 	@After public void reset_mocks() {
