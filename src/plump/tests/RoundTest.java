@@ -52,8 +52,9 @@ public class RoundTest {
 	@Test
 	public void test(){
 		Round r = mock(Round.class);
-		when(r.chooseDealer(pList)).thenReturn(pList.get(0));
-		
+		Player firstInList = pList.get(0);
+		when(r.chooseDealer(pList)).thenReturn(firstInList);
+		assertNotSame(firstInList,pList.get(0));
 	}
 
 }
