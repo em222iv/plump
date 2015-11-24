@@ -12,8 +12,7 @@ public class Round {
 		this.round = _round;
 	}
 	public Object chooseDealer(ArrayList<Player> players) {
-		Player dealer = players.get(0);
-		return dealer;
+
 	}
 	
 }
