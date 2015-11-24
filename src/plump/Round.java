@@ -11,8 +11,8 @@ public class Round {
 		this.players = _players;
 		this.round = _round;
 	}
-	public Object chooseDealer() {
-		return this.players.get(0);
+	public Object chooseDealer(ArrayList<Player> players) {
+		return players.get(0);
 	}
 	
 	
