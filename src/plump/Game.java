@@ -23,8 +23,8 @@ public class Game {
 		return this.pList;
 	}
 
-	public void newRound() throws Exception {
-		throw new UnsupportedOperationException();
+	public void newRound(Player player) {
+		
 	}
 	
 }

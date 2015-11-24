@@ -50,8 +50,8 @@ public class GameTest {
 	@Test
 	public void shouldCallnewRoundOneTime() throws Exception {
 		 gameMock = mock(Game.class);
-		 gameMock.newRound();
-		 verify(gameMock, times(1)).newRound();
+		 gameMock.newRound(playerMock);
+		 verify(gameMock, times(1)).newRound(playerMock);
 	}
 	
 	@Test
