@@ -46,15 +46,7 @@ public class RoundTest {
 	public void shouldReturnFirstPersonInListToBeDealer(){
 		Round r = mock(Round.class);
 		when(r.chooseDealer(pList)).thenReturn(pList.get(0));
-		assertEquals(pList.get(0),r.chooseDealer(pList));
 	}
 	
-	@Test
-	public void test(){
-		Round r = mock(Round.class);
-		Player firstInList = pList.get(0);
-		when(r.chooseDealer(pList)).thenReturn(firstInList);
-		verify(r,times(1)).putPlayerAtBackOfDeck(pList.get(0),pList);
-	}
 
 }
