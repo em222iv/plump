@@ -43,11 +43,17 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void test(){
+	public void shouldReturnFirstPersonInListToBeDealer(){
 		Round r = mock(Round.class);
-		
 		when(r.chooseDealer()).thenReturn(pList.get(0));
 		assertEquals(pList.get(0),r.chooseDealer());
+	}
+	
+	@Test
+	public void test(){
+		Round r = mock(Round.class);
+		when(r.chooseDealer(pList)).thenReturn(pList.get(0));
+		
 	}
 
 }
