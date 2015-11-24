@@ -1,8 +1,8 @@
 package plump.tests;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-
+import static org.mockito.Mockito.*;
+import static org.mockito.Matchers.*;
 import java.util.ArrayList;
 
 import org.junit.Before;
@@ -47,7 +47,7 @@ public class RoundTest {
 		Round r = mock(Round.class);
 		
 		when(r.chooseDealer()).thenReturn(pList.get(0));
-		
+		assertEquals(pList.get(0),r.chooseDealer());
 	}
 
 }

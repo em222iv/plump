@@ -11,6 +11,9 @@ public class Round {
 		this.players = _players;
 		this.round = _round;
 	}
+	public Object chooseDealer() {
+		return this.players.get(0);
+	}
 	
 	
 }
