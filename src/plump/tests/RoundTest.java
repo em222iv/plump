@@ -46,6 +46,7 @@ public class RoundTest {
 	public void shouldReturnFirstPersonInListToBeDealer(){
 		Round r = mock(Round.class);
 		when(r.chooseDealer(pList)).thenReturn(any(Player.class));
+		assertSame(r.chooseDealer(pList), any(Player.class));
 	}
 	
 
