@@ -36,6 +36,8 @@ public class RoundTest {
 		Round round = new Round(game.genereateAI(), deckMock,3);
 		
 		assertNotNull(round.deck);
+		assertNotNull(round.players);
+		assertNotNull(round.round);
 	}
 	
 	
