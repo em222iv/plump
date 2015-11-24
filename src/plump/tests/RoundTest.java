@@ -29,7 +29,7 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void shouldSendPlayersAndDeckToRound() {
+	public void test() {
 		Game game = new Game(playerMock,5,new Deck());
 		Round round = new Round(game.genereateAI(), new Deck(),3);
 	}
