@@ -13,6 +13,7 @@ import plump.Round;
 
 public class RoundTest {
 	
+	private Deck deckMock;
 	private Game gameMock;
  	private Player playerMock;
 		 
@@ -20,18 +21,13 @@ public class RoundTest {
 	public void setUp() {
 	  gameMock = mock( Game.class );
 	  playerMock = mock( Player.class );
-	}
-
-	@Test
-	public void shouldSendPlayersAndDeckToRound() {
-		Game game = new Game(playerMock,5,new Deck());
-		Round round = new Round(game.genereateAI(), new Deck());
+	  deckMock = mock( Deck.class );
 	}
 	
 	@Test
-	public void test() {
-		Game game = new Game(playerMock,5,new Deck());
-		Round round = new Round(game.genereateAI(), new Deck(),3);
+	public void shouldInitiateRoundWithPlayerDeck() {
+		Game game = new Game(playerMock,5,deckMock);
+		Round round = new Round(game.genereateAI(), deckMock,3);
 	}
 	
 	
