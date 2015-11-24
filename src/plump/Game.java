@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Game {
 	public int rounds = 0;
+	public Round round;
 	public Player player;
 	public Deck deck;
 	public ArrayList<Player> playerList;
@@ -15,8 +16,8 @@ public class Game {
 		this.playerList = _players;
 	}
 	
-	public Round newRound() {
-
+	public void newRound() {
+		this.round = new Round(this);
 	}
 	
 }
