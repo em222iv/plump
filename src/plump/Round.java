@@ -10,7 +10,6 @@ public class Round {
 		this.deck = _deck;
 		this.players = _players;
 		this.round = _round;
-		
 	}
 }
  
