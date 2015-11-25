@@ -35,7 +35,8 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void shouldHaveInitializedInternalVariables() {
+	public void shouldHaveInitializedInternalVariables() 
+	{
 		Game game = new Game(pList,5,deckMock);
 		Round round = new Round(this.pList,5,this.deckMock);
 		
@@ -45,8 +46,8 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void shouldReturnFirstPersonInListToBeDealer(){
-		
+	public void shouldReturnFirstPersonInListToBeDealer()
+	{
 		Round r = mock(Round.class);
 		
 		when(r.chooseDealer(pList)).thenReturn(any(Player.class));
@@ -55,7 +56,8 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void shouldBeCalledWithRoundsDeckAndCallHandOutMethodOnIt() {
+	public void shouldBeCalledWithRoundsDeckAndCallHandOutMethodOnIt() 
+	{
 		Deck deck = mock(Deck.class);
 		Round r = new Round(pList,5,deck);
 		
@@ -64,18 +66,21 @@ public class RoundTest {
 		verify(deck,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
 	}
 	
-	@Test(expected=IllegalArgumentException.class)
-	public void shouldTryWithMoreSticksThanRoundsAndThrowsException()
-	{		
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void shouldThrowsIndexOutOfBoundOnInputHighterThanRound() {
 		Round r = new Round(pList,5,deckMock);
-		r.setPlayerRoundStick(pList.get(0),6);
-		assertTrue(r.roundSticks.isEmpty());
+		
+		r.setPlayerRoundStick(playerMock,6);
+		assertFalse(r.roundSticks.isEmpty());
 	}
 
 	@Test
-	public void shouldSetTheAmountOfSticksACertainPlayerWants() {		
+	public void shouldSetTheAmountOfSticksACertainPlayerWants() 
+	{		
 		Round r = new Round(pList,5,deckMock);
-		r.setPlayerRoundStick(pList.get(0),3);
+		
+		r.setPlayerRoundStick(playerMock,3);
+		
 		assertFalse(r.roundSticks.isEmpty());
 	}
 	

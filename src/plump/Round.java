@@ -24,11 +24,10 @@ public class Round {
 		deck.handOutCardToPlayer(round,(Player) chooseDealer(players));
 	}
 	public void setPlayerRoundStick(Player player, int i)  {
-		if(i > round)
-			throw new IllegalArgumentException();
-		
-	
-		
+		if(i > round){
+			throw new IndexOutOfBoundsException();
+		}
+		this.roundSticks.put(player, i);	
 	}
 	
 	
