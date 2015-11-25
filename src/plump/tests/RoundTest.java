@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.Matchers.*;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -44,17 +46,28 @@ public class RoundTest {
 	
 	@Test
 	public void shouldReturnFirstPersonInListToBeDealer(){
+		
 		Round r = mock(Round.class);
+		
 		when(r.chooseDealer(pList)).thenReturn(any(Player.class));
+		
 		assertSame(r.chooseDealer(pList), any(Player.class));
 	}
 	
 	@Test
-	public void test() {
+	public void shouldBeCalledWithRoundsDeckAndCallHandOutMethodOnIt() {
 		Deck deck = mock(Deck.class);
 		Round r = new Round(pList,5,deck);
+		
 		r.deal(deck);
+		
 		verify(deck,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
 	}
+	
 
+	@Test
+	public void test() {		
+		Round r = new Round(pList,5,deckMock);
+		r.setPlayerRoundStick(pList.get(0),3);
+	}
 }
