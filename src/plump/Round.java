@@ -16,6 +16,10 @@ public class Round {
 		Random rand = new Random();
 		return players.get(rand.nextInt(players.size()));
 	}
+	public void deal(Deck deckMock) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
