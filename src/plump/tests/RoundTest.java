@@ -51,11 +51,10 @@ public class RoundTest {
 	
 	@Test
 	public void test() {
-		Round r = mock(Round.class);
-		r.deal(deckMock);
-		verify(deckMock,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
-		
+		Deck deck = mock(Deck.class);
+		Round r = new Round(pList,5,deck);
+		r.deal(deck);
+		verify(deck,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
 	}
-	
 
 }

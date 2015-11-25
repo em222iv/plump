@@ -15,6 +15,7 @@ public class Deck {
 	public Card get(int index) {
 		return deck.get(index);
 	}
+	
 	public void handOutCardToPlayer(int numberOfCards,Player player) {
 		if(numberOfCards == 0)
 			throw new IllegalArgumentException();
