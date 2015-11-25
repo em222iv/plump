@@ -12,6 +12,9 @@ public class Deck {
 		return deck.size();
     }
 
+	public Card get(int index) {
+		return deck.get(index);
+	}
 	public void handOutCardToPlayer(int numberOfCards,Player player) {
 		if(numberOfCards == 0)
 			throw new IllegalArgumentException();
@@ -20,11 +23,6 @@ public class Deck {
 			player.giveCard(curr);
 		}
 	}
-
-	public Card get(int index) {
-		return deck.get(index);
-	}
-
 	public void resetDeck() {
 		Suit[] suits = Suit.values();
 		Value[] values = Value.values();

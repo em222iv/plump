@@ -49,5 +49,13 @@ public class RoundTest {
 		assertSame(r.chooseDealer(pList), any(Player.class));
 	}
 	
+	@Test
+	public void test() {
+		Round r = mock(Round.class);
+		r.deal(deckMock);
+		
+		
+	}
+	
 
 }
