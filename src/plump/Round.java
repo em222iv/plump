@@ -20,6 +20,10 @@ public class Round {
 	public void deal(Deck deck) {
 		deck.handOutCardToPlayer(round,(Player) chooseDealer(players));
 	}
+	public void setPlayerRoundStick(Player player, int i) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
