@@ -69,5 +69,6 @@ public class RoundTest {
 	public void test() {		
 		Round r = new Round(pList,5,deckMock);
 		r.setPlayerRoundStick(pList.get(0),3);
+		assertNotNull(r.roundSticks);
 	}
 }
