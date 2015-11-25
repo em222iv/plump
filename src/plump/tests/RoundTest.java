@@ -65,19 +65,19 @@ public class RoundTest {
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void shouldSetTheAmountOfSticksACertainPlayerWants()
+	public void shouldTryWithMoreSticksThanRoundsAndThrowsException()
 	{		
 		Round r = new Round(pList,5,deckMock);
 		r.setPlayerRoundStick(pList.get(0),6);
 		assertTrue(r.roundSticks.isEmpty());
 	}
 
-//	@Test
-//	public void shouldSetTheAmountOfSticksACertainPlayerWants() {		
-//		Round r = new Round(pList,5,deckMock);
-//		r.setPlayerRoundStick(pList.get(0),3);
-//		assertFalse(r.roundSticks.isEmpty());
-//	}
+	@Test
+	public void shouldSetTheAmountOfSticksACertainPlayerWants() {		
+		Round r = new Round(pList,5,deckMock);
+		r.setPlayerRoundStick(pList.get(0),3);
+		assertFalse(r.roundSticks.isEmpty());
+	}
 	
 
 }
