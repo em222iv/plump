@@ -53,7 +53,7 @@ public class RoundTest {
 	public void test() {
 		Round r = mock(Round.class);
 		r.deal(deckMock);
-		
+		verify(deckMock,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
 		
 	}
 	
