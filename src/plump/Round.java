@@ -24,7 +24,7 @@ public class Round {
 		deck.handOutCardToPlayer(round,(Player) chooseDealer(players));
 	}
 	public void setPlayerRoundStick(Player player, int i) {
-		this.roundSticks.put(player, i);
+		
 		
 	}
 	

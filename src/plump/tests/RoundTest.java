@@ -64,11 +64,19 @@ public class RoundTest {
 		verify(deck,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
 	}
 	
-
 	@Test
-	public void test() {		
+	public void shouldSetTheAmountOfSticksACertainPlayerWants() {		
 		Round r = new Round(pList,5,deckMock);
-		r.setPlayerRoundStick(pList.get(0),3);
-		assertFalse(r.roundSticks.isEmpty());
+		r.setPlayerRoundStick(pList.get(0),6);
+		assertTrue(r.roundSticks.isEmpty());
 	}
+
+//	@Test
+//	public void shouldSetTheAmountOfSticksACertainPlayerWants() {		
+//		Round r = new Round(pList,5,deckMock);
+//		r.setPlayerRoundStick(pList.get(0),3);
+//		assertFalse(r.roundSticks.isEmpty());
+//	}
+	
+
 }
