@@ -64,8 +64,9 @@ public class RoundTest {
 		verify(deck,times(1)).handOutCardToPlayer(any(int.class), any(Player.class));
 	}
 	
-	@Test
-	public void shouldSetTheAmountOfSticksACertainPlayerWants() {		
+	@Test(expected=IllegalArgumentException.class)
+	public void shouldSetTheAmountOfSticksACertainPlayerWants()
+	{		
 		Round r = new Round(pList,5,deckMock);
 		r.setPlayerRoundStick(pList.get(0),6);
 		assertTrue(r.roundSticks.isEmpty());

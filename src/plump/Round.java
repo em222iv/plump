@@ -23,8 +23,9 @@ public class Round {
 	public void deal(Deck deck) {
 		deck.handOutCardToPlayer(round,(Player) chooseDealer(players));
 	}
-	public void setPlayerRoundStick(Player player, int i) {
-		
+	public void setPlayerRoundStick(Player player, int i)  {
+		if(i > round)
+			throw new IllegalArgumentException();
 		
 	}
 	
