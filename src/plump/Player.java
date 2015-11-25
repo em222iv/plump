@@ -1,6 +1,6 @@
 package plump;
 
-public class Player {
+public class Player implements Comparable<Player>{
 	
 	private String name;
 	private Deck hand;
@@ -30,6 +30,12 @@ public class Player {
 
 	public void pickCard(Card obj) {
 		hand.remove(obj);
+	}
+
+	public int compareTo(Player o) {
+		// TODO Auto-generated method stub
+		return this.getName().compareTo(o.getName());
+
 	}
 
 }
