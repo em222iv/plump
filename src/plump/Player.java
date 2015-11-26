@@ -1,6 +1,6 @@
 package plump;
 
-public class Player implements Comparable<Player>{
+public class Player {
 	
 	private String name;
 	private Deck hand;

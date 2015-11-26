@@ -42,8 +42,9 @@ public class TurnTest {
 	@Test
 	public void shouldReturnThePlayerListInserted() 
 	{
-		Turn t = new Turn(pList,playerMock);
-		assertEquals(pList,t.getPlayers());
+		ArrayList<Player> spy = spy(pList);
+		Turn t = mock(Turn.class);
+		doReturn(spy).when(t).getPlayers();
 	}
 	
 	@Test
@@ -55,7 +56,7 @@ public class TurnTest {
 	}
 	
 	@Test
-	public void test() 
+	public void shouldGetInternalValueOfFirstPlayer() 
 	{
 		Turn t = new Turn(pList,playerMock);
 		t.setFirst(playerMock);
@@ -63,10 +64,10 @@ public class TurnTest {
 	}
 
 	@Test
-	public void shouldGetInternalValueOfFirstPlayer() 
+	public void shouldGetInternalValueOfFirstPlayerWithMock() 
 	{
 		  Turn t = mock(Turn.class);
-		  t.setFirst(playerMock);
+
 		  when(t.getFirst()).thenReturn(playerMock);
 
 		  assertEquals(t.getFirst(), playerMock);
