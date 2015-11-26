@@ -39,9 +39,11 @@ public class TurnTest {
 	}
 	
 	@Test
-	public void test() {
+	public void shouldSetInternalvalueOfFirstPlayer() {
 		Turn t = new Turn(pList,playerMock);
 		t.setFirst(playerMock);
+		assertNotNull(t.first);
 	}
+
 
 }
