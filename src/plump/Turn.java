@@ -17,11 +17,9 @@ public class Turn {
 
 	public void setFirst(Player firstPlayer) {
 		this.first = firstPlayer;
-		
 	}
 
 	public Player getFirst() {
-		// TODO Auto-generated method stub
 		return this.first;
 	}
 

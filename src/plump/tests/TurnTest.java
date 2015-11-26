@@ -1,4 +1,4 @@
-package plump;
+package plump.tests;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
+import plump.Deck;
+import plump.Game;
+import plump.Player;
+import plump.Turn;
+
 public class TurnTest {
 	
 	private Deck deckMock;
@@ -16,7 +21,8 @@ public class TurnTest {
  	private ArrayList<Player> pList;
 		 
 	@Before
-	public void setUp() {
+	public void setUp() 
+	{
 	  gameMock = mock( Game.class );
 	  playerMock = mock( Player.class );
 	  deckMock = mock( Deck.class );
@@ -28,32 +34,42 @@ public class TurnTest {
 	}
 	
 	@Test
-	public void shouldExistsTurnConstructor() {
+	public void shouldExistsTurnConstructor() 
+	{
 		new Turn(pList,playerMock);
 	}
 	
 	@Test
-	public void shouldReturnThePlayerListInserted() {
+	public void shouldReturnThePlayerListInserted() 
+	{
 		Turn t = new Turn(pList,playerMock);
 		assertEquals(pList,t.getPlayers());
 	}
 	
 	@Test
-	public void shouldSetInternalvalueOfFirstPlayer() {
+	public void shouldSetInternalvalueOfFirstPlayer() 
+	{
 		Turn t = new Turn(pList,playerMock);
 		t.setFirst(playerMock);
 		assertNotNull(t.first);
 	}
+	
 	@Test
-	public void shouldGetInternalValueOfFirstPlayer() {
-		  Turn test = mock(Turn.class);
-		  
-		  // define return value for method getUniqueId()
-		  when(test.getFirst()).thenReturn(playerMock);
-		  
-		  // use mock in test.... 
-		  assertEquals(test.getFirst(), playerMock);
-		  
+	public void test() 
+	{
+		Turn t = new Turn(pList,playerMock);
+		t.setFirst(playerMock);
+		assertEquals(playerMock,t.getFirst());
+	}
+
+	@Test
+	public void shouldGetInternalValueOfFirstPlayer() 
+	{
+		  Turn t = mock(Turn.class);
+		  t.setFirst(playerMock);
+		  when(t.getFirst()).thenReturn(playerMock);
+
+		  assertEquals(t.getFirst(), playerMock);
 	}
 
 
