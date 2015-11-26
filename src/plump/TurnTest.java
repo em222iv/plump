@@ -44,6 +44,16 @@ public class TurnTest {
 		t.setFirst(playerMock);
 		assertNotNull(t.first);
 	}
+	@Test
+	public void shouldGetInternalValueOfFirstPlayer() {
+		  Turn test = mock(Turn.class);
+		  
+		  // define return value for method getUniqueId()
+		  when(test.getFirst()).thenReturn(playerMock);
+		  
+		  // use mock in test.... 
+		  assertEquals(test.getFirst(), playerMock);
+	}
 
 
 }
