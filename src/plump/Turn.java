@@ -10,8 +10,8 @@ public class Turn {
 		this.pList = _pList;
 	}
 
-	public void getPlayers() {
-		// TODO Auto-generated method stub
+	public ArrayList<Player> getPlayers() {
+		return pList;
 		
 	}
 
