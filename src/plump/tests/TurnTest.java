@@ -3,6 +3,7 @@ package plump.tests;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.awt.List;
 import java.util.ArrayList;
 
 import org.junit.Before;
@@ -38,14 +39,25 @@ public class TurnTest {
 	{
 		new Turn(pList,playerMock);
 	}
-	
+	//do give code Coverage
 	@Test
-	public void shouldReturnThePlayerListInserted() 
+	public void shouldReturnThePlayerListInserted1() 
 	{
 		ArrayList<Player> spy = spy(pList);
 		Turn t = mock(Turn.class);
+		
 		doReturn(spy).when(t).getPlayers();
+		
+		assertEquals(spy,t.getPlayers());
 	}
+	//does not give code Coverage
+	@Test
+	public void shouldReturnThePlayerListInserted2() 
+	{
+		Turn t = new Turn(pList,playerMock);
+		assertEquals(pList,t.getPlayers());
+	}
+	
 	
 	@Test
 	public void shouldSetInternalvalueOfFirstPlayer() 

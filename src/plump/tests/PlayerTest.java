@@ -93,9 +93,11 @@ public class PlayerTest {
 		  player.pickCard(c);
 		  assertEquals(0,player.amountOfCardsOnHand());
 	}
+
 	@After public void reset_mocks() {
 	    Mockito.reset(playerMock);
 	    Mockito.reset(playerSpy);
 	}
+	
 		
 }
