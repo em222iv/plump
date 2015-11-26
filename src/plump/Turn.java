@@ -14,5 +14,10 @@ public class Turn {
 		return pList;
 	}
 
+	public void setFirst(Player firstPlayer) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
