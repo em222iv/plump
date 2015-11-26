@@ -12,7 +12,6 @@ public class Turn {
 
 	public ArrayList<Player> getPlayers() {
 		return pList;
-		
 	}
 
 }
