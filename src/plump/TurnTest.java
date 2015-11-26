@@ -36,7 +36,7 @@ public class TurnTest {
 	@Test
 	public void test() {
 		Turn t = new Turn(pList);
-		t.getPlayers();
+		assertEquals(pList,t.getPlayers());
 	}
 
 }
