@@ -1,9 +1,13 @@
 package plump;
 
+import java.util.ArrayList;
+
 public class Turn {
 
-	public Turn(Object object) {
-		// TODO Auto-generated constructor stub
+	public ArrayList<Player> pList;
+
+	public Turn(ArrayList<Player> _pList) {
+		this.pList = _pList;
 	}
 
 }
