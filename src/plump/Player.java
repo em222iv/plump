@@ -32,10 +32,4 @@ public class Player implements Comparable<Player>{
 		hand.remove(obj);
 	}
 
-	public int compareTo(Player o) {
-		// TODO Auto-generated method stub
-		return this.getName().compareTo(o.getName());
-
-	}
-
 }
