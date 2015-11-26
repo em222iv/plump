@@ -29,7 +29,8 @@ public class TurnTest {
 	
 	@Test
 	public void shouldExistsTurnConstructor() {
-		new Turn(null);
+		Turn t = new Turn(pList);
+		assertNotNull(t.pList);
 	}
 
 }
