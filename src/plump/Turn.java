@@ -20,5 +20,10 @@ public class Turn {
 		
 	}
 
+	public Player getFirst() {
+		// TODO Auto-generated method stub
+		return this.first;
+	}
+
 }
 

@@ -1,7 +1,7 @@
 package plump;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
 
@@ -53,6 +53,7 @@ public class TurnTest {
 		  
 		  // use mock in test.... 
 		  assertEquals(test.getFirst(), playerMock);
+		  
 	}
 
 
