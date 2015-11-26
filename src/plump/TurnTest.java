@@ -29,12 +29,12 @@ public class TurnTest {
 	
 	@Test
 	public void shouldExistsTurnConstructor() {
-		Turn t = new Turn(pList);
+		Turn t = new Turn(pList,playerMock);
 	}
 	
 	@Test
 	public void shouldReturnThePlayerListInserted() {
-		Turn t = new Turn(pList);
+		Turn t = new Turn(pList,playerMock);
 		assertEquals(pList,t.getPlayers());
 	}
 
