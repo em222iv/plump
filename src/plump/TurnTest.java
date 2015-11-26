@@ -32,5 +32,11 @@ public class TurnTest {
 		Turn t = new Turn(pList);
 		assertNotNull(t.pList);
 	}
+	
+	@Test
+	public void test() {
+		Turn t = new Turn(pList);
+		t.getPlayers();
+	}
 
 }
