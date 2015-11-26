@@ -30,11 +30,10 @@ public class TurnTest {
 	@Test
 	public void shouldExistsTurnConstructor() {
 		Turn t = new Turn(pList);
-		assertNotNull(t.pList);
 	}
 	
 	@Test
-	public void test() {
+	public void shouldReturnThePlayerListInserted() {
 		Turn t = new Turn(pList);
 		assertEquals(pList,t.getPlayers());
 	}
