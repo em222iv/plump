@@ -6,9 +6,9 @@ import java.util.Random;
 import java.util.TreeMap;
 
 public class Round {
-	public Deck deck;
-	public int round;
-	public ArrayList<Player> players;
+	private Deck deck;
+	private int round;
+	private ArrayList<Player> players;
 	public Map<Player, Integer> roundSticks = new TreeMap<Player, Integer>();
 	
 	public Round(ArrayList<Player> _players,int _round,Deck _deck) {

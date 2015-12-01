@@ -41,9 +41,9 @@ public class RoundTest {
 		Game game = new Game(pList,5,deckMock);
 		Round round = new Round(this.pList,5,this.deckMock);
 		
-		assertNotNull(round.deck);
-		assertNotNull(round.players);
-		assertNotNull(round.round);
+		assertNotNull(round.getDeck());
+		assertNotNull(round.getPlayers());
+		assertNotNull(round.getRoundNr());
 	}
 	
 	@Test
@@ -106,7 +106,7 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void test() 
+	public void shouldBeCalledAndReturnArrayListOfPlayers() 
 	{
 		Round r = mock(Round.class);
 		
