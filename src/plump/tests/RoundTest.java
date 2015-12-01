@@ -105,4 +105,14 @@ public class RoundTest {
 		assertEquals(r.getRoundNr(), 5);
 	}
 	
+	@Test
+	public void test() 
+	{
+		Round r = mock(Round.class);
+		
+		when(r.getPlayers()).thenReturn(pList);
+		
+		assertEquals(r.getPlayers(), pList);
+	}
+	
 }
