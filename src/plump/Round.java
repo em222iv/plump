@@ -30,6 +30,10 @@ public class Round {
 		}
 		this.roundSticks.put(player, i);	
 	}
+	public Object getDeck() {
+		
+		return this.deck;
+	}
 
 	
 	

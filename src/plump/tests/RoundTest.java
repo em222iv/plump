@@ -90,9 +90,9 @@ public class RoundTest {
 	{
 		Round r = mock(Round.class);
 		
-		when(r.getDeck()).thenReturn(playerMock);
+		when(r.getDeck()).thenReturn(deckMock);
 		
-		assertEquals(r.getDeck(), playerMock);
+		assertEquals(r.getDeck(), deckMock);
 	}
 	
 
