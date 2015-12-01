@@ -121,9 +121,9 @@ public class RoundTest {
 	
 		Round r = mock(Round.class);
 		
-		when(r.getPlayers()).thenReturn(any(TreeMap.class));
+		when(r.getSticks()).thenReturn(any(TreeMap.class));
 		
-		assertEquals(r.getPlayers(), any(TreeMap.class));
+		assertEquals(r.getSticks(), any(TreeMap.class));
 	}
 
 	
