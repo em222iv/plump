@@ -96,7 +96,7 @@ public class RoundTest {
 	}
 
 	@Test
-	public void test() 
+	public void shouldReturnTheCurrentAmountOfRoundsLeft() 
 	{
 		Round r = mock(Round.class);
 		
