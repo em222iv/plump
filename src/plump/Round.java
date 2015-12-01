@@ -30,7 +30,7 @@ public class Round {
 		}
 		this.roundSticks.put(player, i);	
 	}
-	
+
 	
 	
 }
