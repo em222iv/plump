@@ -33,6 +33,9 @@ public class Round {
 	public Object getDeck() {
 		return this.deck;
 	}
+	public Object getRoundNr() {
+		return this.round;
+	}
 	
 }
  
