@@ -39,6 +39,9 @@ public class Round {
 	public Object getPlayers() {
 		return this.players;
 	}
+	public Object getSticks() {
+		return this.roundSticks;
+	}
 	
 }
  

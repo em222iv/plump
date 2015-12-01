@@ -118,12 +118,12 @@ public class RoundTest {
 	@Test
 	public void test() 
 	{
-	
+		Map<Player, Integer> roundSticks = new TreeMap<Player, Integer>();
 		Round r = mock(Round.class);
 		
-		when(r.getSticks()).thenReturn(any(TreeMap.class));
+		when(r.getSticks()).thenReturn(roundSticks);
 		
-		assertEquals(r.getSticks(), any(TreeMap.class));
+		assertEquals(r.getSticks(), roundSticks);
 	}
 
 	
