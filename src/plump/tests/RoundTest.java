@@ -14,6 +14,7 @@ import plump.Deck;
 import plump.Game;
 import plump.Player;
 import plump.Round;
+import plump.Turn;
 
 public class RoundTest {
 	
@@ -82,6 +83,16 @@ public class RoundTest {
 		r.setPlayerRoundStick(playerMock,3);
 		
 		assertFalse(r.roundSticks.isEmpty());
+	}
+	
+	@Test
+	public void test() 
+	{
+		Round r = mock(Round.class);
+		
+		when(r.getDealer()).thenReturn(playerMock);
+		
+		assertEquals(r.getDealer(), playerMock);
 	}
 	
 

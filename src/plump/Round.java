@@ -10,6 +10,7 @@ public class Round {
 	public int round;
 	public ArrayList<Player> players;
 	public Map<Player, Integer> roundSticks = new TreeMap<Player, Integer>();
+	
 	public Round(ArrayList<Player> _players,int _round,Deck _deck) {
 		this.deck = _deck;
 		this.players = _players;
