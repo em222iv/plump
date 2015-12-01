@@ -9,7 +9,7 @@ public class Round {
 	private Deck deck;
 	private int round;
 	private ArrayList<Player> players;
-	public Map<Player, Integer> roundSticks = new TreeMap<Player, Integer>();
+	private Map<Player, Integer> roundSticks;
 	
 	public Round(ArrayList<Player> _players,int _round,Deck _deck) {
 		this.deck = _deck;
@@ -25,21 +25,22 @@ public class Round {
 		deck.handOutCardToPlayer(round,(Player) chooseDealer(players));
 	}
 	public void setPlayerRoundStick(Player player, int i)  {
+		this.roundSticks = new TreeMap<Player, Integer>();
 		if(i > round){
 			throw new IndexOutOfBoundsException();
 		}
 		this.roundSticks.put(player, i);	
 	}
-	public Object getDeck() {
+	public Deck getDeck() {
 		return this.deck;
 	}
-	public Object getRoundNr() {
+	public int getRoundNr() {
 		return this.round;
 	}
-	public Object getPlayers() {
+	public ArrayList<Player> getPlayers() {
 		return this.players;
 	}
-	public Object getSticks() {
+	public Map<Player, Integer> getSticks() {
 		return this.roundSticks;
 	}
 	

@@ -14,7 +14,6 @@ import plump.Deck;
 import plump.Game;
 import plump.Player;
 import plump.Round;
-import plump.Turn;
 
 public class RoundTest {
 	
@@ -72,7 +71,7 @@ public class RoundTest {
 		Round r = new Round(pList,5,deckMock);
 		
 		r.setPlayerRoundStick(playerMock,6);
-		assertFalse(r.roundSticks.isEmpty());
+		assertFalse(((Map<Player, Integer>) r.getSticks()).isEmpty());
 	}
 
 	@Test
@@ -82,7 +81,7 @@ public class RoundTest {
 		
 		r.setPlayerRoundStick(playerMock,3);
 		
-		assertFalse(r.roundSticks.isEmpty());
+		assertFalse(((Map<Player, Integer>) r.getSticks()).isEmpty());
 	}
 	
 	@Test
@@ -116,15 +115,16 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void test() 
+	public void shouldReturnTreeMapWithPlayersChosenSticks() 
 	{
-		Map<Player, Integer> roundSticks = new TreeMap<Player, Integer>();
+		Map<Player, Integer> Hej = new TreeMap<Player, Integer>();
+		Hej.put(playerMock, 4);	
 		Round r = mock(Round.class);
 		
-		when(r.getSticks()).thenReturn(roundSticks);
+		when(r.getSticks()).thenReturn(Hej);
+		r.setPlayerRoundStick(playerMock, 4);
 		
-		assertEquals(r.getSticks(), roundSticks);
+		assertEquals(r.getSticks(),Hej);
 	}
-
 	
 }
