@@ -57,7 +57,7 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void shouldBeCalledWithRoundsDeckAndCallHandOutMethodOnIt() 
+	public void shouldBeCalledWithRoundsDeckAndCallHandOutMethodOneTime() 
 	{
 		Deck deck = mock(Deck.class);
 		Round r = new Round(pList,5,deck);
@@ -114,5 +114,17 @@ public class RoundTest {
 		
 		assertEquals(r.getPlayers(), pList);
 	}
+	
+	@Test
+	public void test() 
+	{
+	
+		Round r = mock(Round.class);
+		
+		when(r.getPlayers()).thenReturn(any(TreeMap.class));
+		
+		assertEquals(r.getPlayers(), any(TreeMap.class));
+	}
+
 	
 }
