@@ -86,7 +86,7 @@ public class RoundTest {
 	}
 	
 	@Test
-	public void test() 
+	public void shouldReturnTheCurrentRoundsDeck() 
 	{
 		Round r = mock(Round.class);
 		
@@ -94,6 +94,8 @@ public class RoundTest {
 		
 		assertEquals(r.getDeck(), deckMock);
 	}
+	
+	
 	
 
 }
