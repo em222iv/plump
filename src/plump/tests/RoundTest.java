@@ -94,8 +94,15 @@ public class RoundTest {
 		
 		assertEquals(r.getDeck(), deckMock);
 	}
-	
-	
-	
 
+	@Test
+	public void test() 
+	{
+		Round r = mock(Round.class);
+		
+		when(r.getRoundNr()).thenReturn(5);
+		
+		assertEquals(r.getRoundNr(), 5);
+	}
+	
 }
