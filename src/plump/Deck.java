@@ -43,9 +43,4 @@ public class Deck {
 		deck.remove(card);
 	}
 
-	public Card getFirst() {
-		
-		return deck.get(0);
-	}
-
 }

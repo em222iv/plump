@@ -3,6 +3,8 @@ package plump.tests;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.Matchers.*;
+
+import java.awt.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
@@ -80,6 +82,7 @@ public class RoundTest {
 		Round r = new Round(pList,5,deckMock);
 		
 		r.setPlayerRoundStick(playerMock,-1);
+		
 		assertFalse(((Map<Player, Integer>) r.getSticks()).isEmpty());
 	}
 
@@ -126,14 +129,25 @@ public class RoundTest {
 	@Test
 	public void shouldReturnTreeMapWithPlayersChosenSticks() 
 	{
-		Map<Player, Integer> Hej = new TreeMap<Player, Integer>();
-		Hej.put(playerMock, 4);	
+		Map<Player, Integer> m = new TreeMap<Player, Integer>();
+		m.put(playerMock, 4);	
 		Round r = mock(Round.class);
 		
-		when(r.getSticks()).thenReturn(Hej);
+		when(r.getSticks()).thenReturn(m);
 		r.setPlayerRoundStick(playerMock, 4);
 		
-		assertEquals(r.getSticks(),Hej);
+		assertEquals(r.getSticks(),m);
+	}
+	
+	@Test
+	public void test() 
+	{	
+		ArrayList spy = spy(new ArrayList());
+		spy.add(new Player("spier", new Deck()));
+		
+		Round r = new Round(spy,5,deckMock);
+		
+		assertEquals(1,r.getPlayers().size());
 	}
 	
 }

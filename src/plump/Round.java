@@ -47,10 +47,6 @@ public class Round {
 		return p.amountOfCardsOnHand();
 		
 	}
-	public int print() {
-		System.out.print("ett riktigt kall");
-		return 1;
-	}
 	
 }
  
