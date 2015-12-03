@@ -78,10 +78,8 @@ public class PlayerTest {
 	public void shouldHave7CardsOnHand()
 	{		
 		  Player play = spy(new Player("test",this.hand));
-		  Deck d = new Deck();
-		  d.resetDeck();
-		  d.handOutCardToPlayer(7,play);
-		  assertEquals(7,play.amountOfCardsOnHand());	  
+		  play.giveCard(any(Card.class));
+		  verify(play,times(1)).giveCard(any(Card.class)); 
 	}
 	
 	@Test

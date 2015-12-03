@@ -9,6 +9,7 @@ import java.util.TreeMap;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
 import plump.Deck;
 import plump.Game;
@@ -71,6 +72,14 @@ public class RoundTest {
 		Round r = new Round(pList,5,deckMock);
 		
 		r.setPlayerRoundStick(playerMock,6);
+		assertFalse(((Map<Player, Integer>) r.getSticks()).isEmpty());
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void shouldThrowsIndexOutOfBoundOnInputLowerThanZero() {
+		Round r = new Round(pList,5,deckMock);
+		
+		r.setPlayerRoundStick(playerMock,-1);
 		assertFalse(((Map<Player, Integer>) r.getSticks()).isEmpty());
 	}
 

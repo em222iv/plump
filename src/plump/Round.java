@@ -43,6 +43,14 @@ public class Round {
 	public Map<Player, Integer> getSticks() {
 		return this.roundSticks;
 	}
+	public int getPlayerDeckSize(Player p) {
+		return p.amountOfCardsOnHand();
+		
+	}
+	public int print() {
+		System.out.print("ett riktigt kall");
+		return 1;
+	}
 	
 }
  
