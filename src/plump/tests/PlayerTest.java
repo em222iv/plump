@@ -97,5 +97,12 @@ public class PlayerTest {
 	    Mockito.reset(playerSpy);
 	}
 	
+	@Test
+	public void test() {
+		Player p = new Player("test",hand);
+		assertNotNull(p.compareTo(playerSpy));
+
+	}   
+	
 		
 }
