@@ -32,4 +32,8 @@ public class Player implements Comparable<Player>{
 		hand.remove(obj);
 	}
 
+	public int compareTo(Player o) {
+		return this.getName().compareTo(o.getName());
+	}
+
 }
