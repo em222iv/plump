@@ -26,7 +26,7 @@ public class Round {
 	}
 	public void setPlayerRoundStick(Player player, int i)  {
 		this.roundSticks = new TreeMap<Player, Integer>();
-		if(i > round){
+		if(i > round || i < 0){
 			throw new IndexOutOfBoundsException();
 		}
 		this.roundSticks.put(player, i);	
